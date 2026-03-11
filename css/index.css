@@ -1,0 +1,132 @@
+@layer theme, resets, typography, components, utilities;
+/* variáveis */
+@layer theme {
+  :root {
+    /* fontes */
+    --font-body: "Nunito Sans", sans-serif;
+    --font-heading: "Nunito", sans-serif;
+    /* cores */
+    --color-theme: #005cff;
+    --color-purple: #6220c1;
+    --color-text-foreground: #000;
+    --color-text-md-foreground: #303030;
+    --color-light-bg: #fff;
+    --color-text-light-foreground: #fff;
+    --color-medium-bg: #f5f5f5;
+    --color-main-product-ad-bg: #dedede;
+    --color-home-hero-bg: #e7e7ea;
+    --color-product-discount-label-bg: #5ec0be;
+    --color-new-product-label-bg: #00264e;
+    /* tamanhos de fontes */
+    --text-xs: 0.75rem; /*12*/
+    --text-sm: 0.875rem; /*14*/
+    --text-base: 1rem; /*16*/
+    --text-lg: 1.125rem; /*18*/
+    --text-xl: 1.25rem; /*20*/
+    --text-2xl: 1.5rem; /*24*/
+    --text-3xl: 1.75rem; /*28*/
+    --text-5xl: 2rem; /*32*/
+  }
+}
+
+/* resets */
+@layer resets {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    scrollbar-width: none;
+  }
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+    -webkit-user-drag: none !important;
+    -moz-user-drag: none !important;
+    -ms-user-drag: none !important;
+  }
+}
+
+/*tipografia*/
+@layer typography {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+  }
+  body {
+    font-family: var(--font-body);
+    color: var(--text-foreground);
+  }
+}
+
+@layer components {
+  .h-40 {
+    height: 40px;
+  }
+  .h-20 {
+    height: 20px;
+  }
+  button {
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .button-primary {
+    background-color: var(--color-theme);
+    width: 100%;
+    padding: 12px;
+    font-size: var(--text-base);
+    font-weight: 700;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/*mobile e desktop*/
+@layer utilities {
+  .to-mobile {
+    display: block;
+  }
+  .not-for-mobile {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .to-mobile {
+      display: none;
+    }
+    .not-for-mobile {
+      display: block;
+    }
+  }
+
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

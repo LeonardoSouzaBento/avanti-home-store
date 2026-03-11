@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300..700&family=Nunito+Sans:opsz,wght@6..12,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/main/about-section.css" />
+    <link rel="stylesheet" href="./css/main/contact-section.css" />
+    <link rel="stylesheet" href="./css/main/hero-section.css" />
+    <link rel="stylesheet" href="./css/main/products-section.css" />
+    <link rel="stylesheet" href="./css/main/main-product-ad.css" />
+    <!-- js -->
+    <script src="./js/index.js" type="module"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-wrapper">
+        <div class="promotional-topbar">
+          <p style="font-weight: 700">
+            Ganhe
+            <span
+              style="
+                background-color: var(--color-purple);
+                padding-inline: 4.5px;
+              "
+              >R$10,00</span
+            >
+            de desconto no seu primeiro pedido. Utilize o cupom
+            <span style="font-weight: 300">DESCONTO10</span>
+          </p>
+        </div>
+        <!-- Conteúdo principal -->
+        <div class="header-main container">
+          <!-- Menu mobile -->
+          <button class="menu-btn" aria-label="Abrir menu">
+            <svg class="icon-menu"></svg>
+          </button>
+
+          <!-- Logo -->
+          <a href="/" class="logo">
+            <svg class="svg-avanti-header-logo"></svg>
+            <img src="/logo.svg" alt="Avanti" />
+          </a>
+
+          <!-- Busca -->
+          <form class="search">
+            <input type="text" placeholder="Digite aqui o que você procura" />
+            <button type="submit">
+              <svg class="svg-search"></svg>
+            </button>
+          </form>
+
+          <div class="user-area-wrapper not-for-mobile">
+            <a href="/conta" class="account">
+              <i class="icon-user"></i>
+              <span>
+                Olá,<br />
+                Nome cliente!
+              </span>
+            </a>
+
+            <a href="/carrinho" class="cart">
+              <i class="icon-cart"></i>
+              <span class="badge">2</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navegação -->
+        <nav class="nav container">
+          <button class="categories-btn">
+            <i class="icon-menu"></i>
+            Todas as Categorias
+          </button>
+
+          <ul class="nav-list not-for-mobile">
+            <li><a href="#">Departamento</a></li>
+          </ul>
+          <menu></menu>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero-section">
+        <div class="hero-section-wrapper">
+          <div class="hero-image-wrapper">
+            <img src="./public/hero-product.png" alt="" />
+          </div>
+          <div class="hero-content" style="text-transform: uppercase">
+            <h2>
+              SUPER <br class="to-mobile" />
+              <span>SALE</span>
+            </h2>
+            <p>Selected items up to</p>
+            <h3>50%off</h3>
+          </div>
+          <div class="pagination-wrapper">
+            <span class="pagination-span"></span>
+          </div>
+        </div>
+      </section>
+      <section class="products-section container">
+        <div class="products-header">
+          <h2>Lançamentos</h2>
+          <a href="#" class="view-all"
+            >Ver todos <span class="view-all-indicator"></span
+          ></a>
+        </div>
+        <div id="products-grid" class="products-grid"></div>
+      </section>
+      <section class="main-product-secondary-ad">
+        <div class="main-product-secondary-ad-wrapper">
+          <div class="main-product-secondary-ad-image-wrapper">
+            <img class="main-product-secondary-ad-image" />
+          </div>
+          <div class="main-product-secondary-ad-content">
+            <h3>Loren ipsum</h3>
+            <p>
+              Duis consectetur metus nec lacus auctor dignissim. Mauris vitae
+              finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras
+              efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed
+              lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas
+              fringilla porttitor tortor eget lacinia. Donec sollicitudin
+              euismod orci, auctor fringilla magna consequat interdum. Fusce
+              sagittis elit a libero commodo egestas efficitur id augue.
+            </p>
+            <p>
+              Duis consectetur metus nec lacus auctor dignissim. Mauris vitae
+              finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras
+              efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed
+              lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas
+              fringilla porttitor tortor eget lacinia. Donec sollicitudin
+              euismod orci, auctor fringilla magna consequat interdum. Fusce
+              sagittis elit a libero commodo egestas efficitur id augue.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="main-product-first-ad">
+        <div class="main-product-first-ad-wrapper">
+          <div class="main-product-first-ad-image-wrapper">
+            <img class="main-product-first-ad-image" />
+          </div>
+          <div class="main-product-first-ad-content">
+            <h3>Loren ipsum</h3>
+            <div id="features-list" class="features-list">
+              <!-- repetidos por script -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main-product-secondary-ad"></section>
+      <section class="about-section">
+        <div class="about-image-wrapper">
+          <img class="about-image" src="./public/avanti-studeo.png" alt="" />
+          <div class="about-message-wrapper">
+            <p class="about-message">
+              Entre em contato conosco e verifique a disponibilidade para sua
+              região!
+            </p>
+          </div>
+        </div>
+        <div class="newsletter-wrapper">
+          <h6 class="">Cadastre-se na nossa <span>newsletter</span></h6>
+          <form class="newsletter-input-area">
+            <input type="text" placeholder="Digite seu nome" />
+            <input type="email" placeholder="Digite seu e-mail" />
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="accept-policy-terms" />
+              <label for="accept-policy-terms"
+                >Estou de acordo com a
+                <span>Política de Privacidade</span></label
+              >
+            </div>
+            <button>Cadastrar</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-wrapper">
+        <div class="footer-social-media-wrapper">
+          <svg class="svg-footer-avanti-logo-social-media"></svg>
+          <div class="footer-social-media"></div>
+        </div>
+        <div class="footer-link-group-wrapper">
+          <div class="footer-link-group">
+            <div class="ul-footer-header">
+              <h5 class="footer-link-mobile">Institucional</h5>
+              <h4 class="footer-link-desktop">Institucional</h4>
+              <button class="colapse-ul-footer"></button>
+            </div>
+            <ul class="ul-footer">
+              <li>
+                <h6>Sobre nós</h6>
+                <h5>Sobre nós</h5>
+              </li>
+              <li>
+                <h6>Nossas Lojas</h6>
+                <h5>Nossas Lojas</h5>
+              </li>
+              <li>
+                <h6>Privacidade e segurança</h6>
+                <h5>Privacidade e segurança</h5>
+              </li>
+              <li>
+                <h6>Termos e condições</h6>
+                <h5>Termos e condições</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-link-group">
+            <div class="ul-footer-header">
+              <h5 class="footer-link-mobile">Central de ajuda</h5>
+              <h4 class="footer-link-desktop">Central de ajuda</h4>
+              <button class="colapse-ul-footer"></button>
+            </div>
+            <ul class="ul-footer">
+              <li>
+                <h6>Fale Conosco</h6>
+                <h5>Fale Conosco</h5>
+              </li>
+              <li>
+                <h6>Frete e Entrega</h6>
+                <h5>Frete e Entrega</h5>
+              </li>
+              <li>
+                <h6>Trocas e Devoluções</h6>
+                <h5>Trocas e Devoluções</h5>
+              </li>
+              <li>
+                <h6>Formas de Pagamento</h6>
+                <h5>Formas de Pagamento</h5>
+              </li>
+              <li>
+                <h6>FAQ</h6>
+                <h5>FAQ</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-link-group">
+            <div class="ul-footer-header">
+              <h5 class="footer-link-mobile">Atendimento</h5>
+              <h4 class="footer-link-desktop">Atendimento</h4>
+              <button class="colapse-ul-footer"></button>
+            </div>
+            <ul class="ul-footer">
+              <li>
+                <h6>Telefone</h6>
+                <h5>Telefone</h5>
+                <p>(00) 1234-5678</p>
+              </li>
+              <li>
+                <h6>Email</h6>
+                <h5>Email</h5>
+                <p>exemplo@exemplo.com.br</p>
+              </li>
+              <li>
+                <h6>Horário de atendimento</h6>
+                <h5>Horário de atendimento</h5>
+                <p>Sábado a sábados: 7:</p>
+                <p>Sábado: 09:00 - 17:00</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-payments-method"></div>
+        <div class="footer-more-info-wrapper">
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.
+          </p>
+          <div class="footer-companies-logo"></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
