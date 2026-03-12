@@ -1,0 +1,127 @@
+@layer components {
+  .main-product,
+  .main-product-1,
+  .main-product-2 {
+    width: 100%;
+    max-width: 1177px;
+    max-height: 747px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #dedede;
+  }
+}
+
+@layer components {
+  .main-product-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    padding: 28px 20px;
+  }
+
+  .main-product-image-wrapper {
+    min-width: 349px;
+    min-height: 349px;
+    max-width: 652px;
+    max-height: 728.14px;
+    position: relative;
+    flex: auto;
+  }
+
+  .main-product-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .main-product-content {
+    width: 100%;
+    max-width: 476px;
+    max-height: 567px;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-title);
+  }
+
+  .main-product-content h3 {
+    width: 100%;
+    text-align: center;
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--color-text-foreground);
+    text-transform: uppercase;
+    margin-bottom: 21px;
+  }
+
+  .main-product-content p {
+    font-size: var(--text-xs);
+    color: var(--color-text-md-foreground);
+    line-height: 1.4;
+    /* font-family: var(--font-title); */
+  }
+
+  /* Features List */
+  .features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-align: left;
+    height: auto;
+  }
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    border-radius: 50%;
+    background-color: var(--color-theme);
+  }
+  .feature-icon svg {
+    width: 30px;
+    height: 30px;
+    color: white;
+  }
+  .feature-text {
+    font-size: var(--text-sm);
+    color: var(--color-text-md-foreground);
+    line-height: 1.4;
+  }
+}
+
+@layer components {
+  .main-product-wrapper2 {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    margin-top: 56px;
+  }
+  .main-product-image-wrapper2 {
+    min-width: 391px;
+    min-height: 390px;
+    position: relative;
+    background-color: #C2C2C2;
+  }
+  .main-product-image2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .main-product-title2 {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .main-product-content2{
+    padding: 0 24px 46px;
+  }
+}

@@ -1,17 +1,17 @@
 import {
   footerLinkGroups,
   footerSvgs,
-  products,
   icons,
-  mainProductAd,
-  secondaryProductAds,
+  singleAboutMainProduct,
+  aboutsMainProduct,
+  carouselProducts,
 } from "../data/index.js";
 import {
   insertFooterLinkGroup,
   insertFooterSvgGroup,
-  insertCarouselProductCards,
-  insertMainProductFirstAd,
-  insertMainProductSecondAds,
+  insertCarouselProducts,
+  insertSingleMainProductAbout,
+  insertMainProductAbouts,
 } from "./index.js";
 
 function insertSvg() {
@@ -44,9 +44,9 @@ function insertSvg() {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  insertCarouselProductCards(products);
-  insertMainProductSecondAds(secondaryProductAds);
-  insertMainProductFirstAd(mainProductAd);
+  insertCarouselProducts(carouselProducts);
+  insertMainProductAbouts(aboutsMainProduct);
+  insertSingleMainProductAbout(singleAboutMainProduct);
   insertFooterLinkGroup(footerLinkGroups);
   insertFooterSvgGroup(footerSvgs, icons);
   insertSvg();

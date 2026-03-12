@@ -1,0 +1,42 @@
+// const departments = Array.from({ length: 12 }, (_, d) => ({ // name:
+`Departamento`, // cats: Array.from({ length: 3 }, (_, c) => ({ // name:
+`Categoria`, // subcats: Array.from({ length: 8 }, (_, s) => ({ // name:
+`Categoria`, // })), // })), // }));
+
+<div class="header-wrapper">
+  <!-- Conteúdo principal -->
+  <div class="header-main">
+    <!-- Menu mobile -->
+    <button class="menu-btn" aria-label="Abrir menu">
+      <svg class="icon-menu"></svg>
+    </button>
+
+    <!-- Logo -->
+    <a href="/" class="logo">
+      <svg class="svg-avanti-header-logo"></svg>
+    </a>
+
+    <!-- Busca -->
+    <form class="search">
+      <input type="text" placeholder="Digite aqui o que você procura" />
+      <button type="submit">
+        <svg class="svg-search"></svg>
+      </button>
+    </form>
+
+    <div class="user-area-wrapper not-for-mobile">
+      <a href="/conta" class="account">
+        <i class="icon-user"></i>
+        <span>
+          Olá,<br />
+          Nome cliente!
+        </span>
+      </a>
+
+      <a href="/carrinho" class="cart">
+        <i class="icon-cart"></i>
+        <span class="badge">2</span>
+      </a>
+    </div>
+  </div>
+</div>

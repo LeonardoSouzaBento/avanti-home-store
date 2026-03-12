@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300..700&family=Nunito+Sans:opsz,wght@6..12,400..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300..700&family=Nunito+Sans:opsz,wght@6..12,300..700&display=swap"
       rel="stylesheet"
     />
     <!-- css -->
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./src/css/header/header.css" />
     <link rel="stylesheet" href="./src/css/main/hero.css" />
     <link rel="stylesheet" href="./src/css/main/product-carousel.css" />
-    <link rel="stylesheet" href="./src/css/main/main-product-ad.css" />
+    <link rel="stylesheet" href="./src/css/main/main-product.css" />
     <link rel="stylesheet" href="./src/css/main/about-section.css" />
     <link rel="stylesheet" href="./src/css/main//newsletter.css" />
     <link rel="stylesheet" href="./src/css/footer/footer.css" />
@@ -25,70 +25,61 @@
   </head>
   <body>
     <header>
+      <div class="promotional-topbar">
+        <p style="font-weight: 700">
+          Ganhe
+          <span
+            style="background-color: var(--color-purple); padding-inline: 4.5px"
+            >R$10,00</span
+          >
+          de desconto no seu primeiro pedido. Utilize o cupom
+          <span style="font-weight: 300">DESCONTO10</span>
+        </p>
+      </div>
       <div class="header-wrapper">
-        <div class="promotional-topbar">
-          <p style="font-weight: 700">
-            Ganhe
-            <span
-              style="
-                background-color: var(--color-purple);
-                padding-inline: 4.5px;
-              "
-              >R$10,00</span
-            >
-            de desconto no seu primeiro pedido. Utilize o cupom
-            <span style="font-weight: 300">DESCONTO10</span>
-          </p>
-        </div>
-        <!-- Conteúdo principal -->
-        <div class="header-main">
-          <!-- Menu mobile -->
-          <button class="menu-btn" aria-label="Abrir menu">
-            <svg class="icon-menu"></svg>
+        <div class="header-top">
+          <button class="menu-btn for-mobile">
+            <svg class="svg-menu"></svg>
           </button>
 
-          <!-- Logo -->
-          <a href="/" class="logo">
+          <div class="logo">
             <svg class="svg-avanti-header-logo"></svg>
-          </a>
+          </div>
 
-          <!-- Busca -->
-          <form class="search">
-            <input type="text" placeholder="Digite aqui o que você procura" />
-            <button type="submit">
-              <svg class="svg-search"></svg>
-            </button>
-          </form>
-
-          <div class="user-area-wrapper not-for-mobile">
-            <a href="/conta" class="account">
-              <i class="icon-user"></i>
-              <span>
+          <div class="header-actions">
+            <a href="#" class="user not-for-mobile">
+              <span class="icon-user"></span>
+              <span class="user-text">
                 Olá,<br />
                 Nome cliente!
               </span>
             </a>
 
-            <a href="/carrinho" class="cart">
-              <i class="icon-cart"></i>
-              <span class="badge">2</span>
+            <a href="#" class="cart">
+              <svg class="svg-header-cart"></svg>
+              <span class="cart-count">2</span>
             </a>
           </div>
         </div>
 
-        <!-- Navegação -->
-        <nav class="nav">
-          <button class="categories-btn">
-            <i class="icon-menu"></i>
-            Todas as Categorias
+        <div class="header-search">
+          <input type="text" placeholder="Digite aqui o que você procura" />
+          <button class="search-btn">
+            <svg class="svg-search"></svg>
           </button>
-
-          <ul class="nav-list not-for-mobile">
-            <li><a href="#">Departamento</a></li>
-          </ul>
-          <menu></menu>
-        </nav>
+        </div>
       </div>
+      <nav class="nav">
+        <button>
+          <svg class="svg-all-cats-menu-icon"></svg>
+          Todas as Categorias
+        </button>
+
+        <ul class="nav-list not-for-mobile">
+          <li><a href="#">Departamento</a></li>
+        </ul>
+        <menu></menu>
+      </nav>
     </header>
     <main>
       <section class="hero-section">
@@ -99,7 +90,7 @@
             </div>
             <div class="hero-content" style="text-transform: uppercase">
               <h2>
-                SUPER <br class="to-mobile" />
+                SUPER <br class="for-mobile" />
                 <span>SALE</span>
               </h2>
               <p>Selected items up to</p>
@@ -111,20 +102,11 @@
           </div>
         </div>
       </section>
-      <section class="product-carousel">
-        <div class="product-carousel-header">
-          <h2>Lançamentos</h2>
-          <a href="#" class="view-all"
-            >Ver todos <span class="view-all-indicator"></span
-          ></a>
-        </div>
-        <div class="product-carousel-container">
-          <div class="product-carousel-wrapper"></div>
-        </div>
-      </section>
-      <section class="main-product-second-ad"></section>
-      <section class="main-product-first-ad"></section>
-      <section class="main-product-second-ad"></section>
+      <section class="product-carousel-1"></section>
+      <section class="main-product2"></section>
+      <section class="main-product"></section>
+      <section class="main-product2"></section>
+      <section class="product-carousel-2 not-for-mobile"></section>
       <section class="about-section">
         <div class="about-image-wrapper">
           <img
@@ -140,7 +122,7 @@
           </div>
         </div>
         <div class="newsletter-wrapper">
-          <h6 class="">Cadastre-se na nossa <span>newsletter</span></h6>
+          <h6 class="newsletter-title">Cadastre-se na nossa <span>newsletter</span></h6>
           <form class="newsletter-form">
             <input id="name-input" type="text" placeholder="Digite seu nome" />
             <input

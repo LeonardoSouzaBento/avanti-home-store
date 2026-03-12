@@ -27,14 +27,14 @@
     align-items: center;
     gap: 40px;
     justify-content: space-between;
+    /* border: 1px solid red; */
   }
 
   .footer-social-media {
-    width: 100%;
-    height: max-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
   }
 
   /* MOBILE */
@@ -53,7 +53,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-inline: 12px;
+    padding-inline: 16px;
     margin-bottom: 0;
     border-bottom: 1px solid var(--color-border);
   }
@@ -117,10 +117,14 @@
   }
 
   .footer-payments-method {
+    height: auto;
     min-width: 288px;
+    width: 100%;
     max-width: 545px;
     height: 65px;
     margin-inline: auto;
+    padding-top: 48px;
+    padding-bottom: 40px;
     display: flex;
     justify-content: center;
     align-items: center;

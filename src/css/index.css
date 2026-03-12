@@ -4,7 +4,7 @@
   :root {
     /* fontes */
     --font-body: "Nunito Sans", sans-serif;
-    --font-heading: "Nunito", sans-serif;
+    --font-title: "Nunito", sans-serif;
     /* cores */
     --color-theme: #005cff;
     --color-purple: #6220c1;
@@ -72,7 +72,7 @@
   h4,
   h5,
   h6 {
-    font-family: var(--font-heading);
+    font-family: var(--font-title);
   }
   body {
     font-family: var(--font-body);
@@ -92,6 +92,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    outline: none;
+    border: none;
   }
   .button-primary {
     width: 100%;
@@ -117,7 +119,7 @@
 
 /*mobile e desktop*/
 @layer utilities {
-  .to-mobile {
+  .for-mobile {
     display: block;
   }
   .not-for-mobile {
@@ -125,7 +127,7 @@
   }
 
   @media (min-width: 768px) {
-    .to-mobile {
+    .for-mobile {
       display: none;
     }
     .not-for-mobile {
