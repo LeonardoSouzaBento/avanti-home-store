@@ -1,0 +1,46 @@
+@layer components {
+  .about-section {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-image-wrapper {
+    position: relative;
+    width: 100%;
+    flex: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 449px;
+    max-height: 660px;
+    position: relative;
+        margin-bottom: 54px;
+  }
+
+  .about-image-wrapper img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  .about-message-wrapper {
+    width: 100%;
+    background-color: var(--color-theme);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .about-message {
+    color: #fff;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.4;
+  }
+}

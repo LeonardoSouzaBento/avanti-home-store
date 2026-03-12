@@ -8,6 +8,7 @@
     /* cores */
     --color-theme: #005cff;
     --color-purple: #6220c1;
+    --color-border: #d5d5d5;
     --color-text-foreground: #000;
     --color-text-md-foreground: #303030;
     --color-light-bg: #fff;
@@ -45,7 +46,6 @@
   body::-webkit-scrollbar {
     display: none;
   }
-
   a {
     text-decoration: none;
   }
@@ -57,6 +57,10 @@
     -webkit-user-drag: none !important;
     -moz-user-drag: none !important;
     -ms-user-drag: none !important;
+  }
+  body {
+    max-width: 1920px;
+    margin-inline: auto;
   }
 }
 
@@ -90,15 +94,20 @@
     justify-content: center;
   }
   .button-primary {
-    background-color: var(--color-theme);
     width: 100%;
-    padding: 12px;
+    height: 40px;
+    padding-inline: 12px;
+    background-color: var(--color-theme);
     font-size: var(--text-base);
     font-weight: 700;
     color: white;
     border: none;
     cursor: pointer;
     transition: opacity 0.2s;
+  }
+  .button-icon {
+    height: 36px;
+    width: 36px;
   }
   .container {
     padding-left: 1rem;

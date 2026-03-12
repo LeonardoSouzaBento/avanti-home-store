@@ -1,26 +1,26 @@
 @layer components {
   footer {
     background-color: var(--color-medium-bg);
-    padding: 48px 0 24px;
     color: var(--color-text-md-foreground);
     margin-top: 48px;
+    padding-top: 40px;
   }
 
   .footer-wrapper {
-    max-width: 1200px;
+    max-width: 1163px;
     margin: 0 auto;
-    padding: 0 16px;
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 40px;
   }
 
   .footer-social-media-wrapper {
     width: 194px;
-    height: 93px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
+    gap: 40px;
     justify-content: space-between;
   }
 
@@ -32,17 +32,25 @@
     align-items: center;
   }
 
+  /* MOBILE */
   .footer-link-group-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 32px;
+    grid-template-columns: 1fr;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .ul-footer {
+    padding-inline: 12px;
   }
 
   .ul-footer-header {
+    height: 54px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 24px;
+    padding-inline: 12px;
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--color-border);
   }
 
   .ul-footer-header h4,
@@ -52,19 +60,24 @@
     color: var(--color-text-foreground);
   }
 
-  .footer-link-mobile {
+  .footer-link-desktop {
     display: none;
   }
 
-  .footer-link-desktop {
+  .footer-link-mobile {
     display: block;
   }
 
   .ul-footer {
     list-style: none;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 16px;
+  }
+
+  .ul-footer.active {
+    display: flex;
+    padding: 16px 0;
   }
 
   .ul-footer li h5 {
@@ -88,8 +101,8 @@
     color: var(--color-text-md-foreground);
   }
 
-  .colapse-ul-footer {
-    display: none;
+  .ul-footer-header button {
+    display: block;
     background: none;
     border: none;
     cursor: pointer;
@@ -98,38 +111,27 @@
     height: 24px;
   }
 
-  .colapse-ul-footer::before,
-  .colapse-ul-footer::after {
-    content: "";
-    position: absolute;
-    background-color: currentColor;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .colapse-ul-footer::before {
-    width: 12px;
-    height: 2px;
-  }
-
-  .colapse-ul-footer::after {
-    width: 2px;
-    height: 12px;
-  }
-
-  .colapse-ul-footer.active::after {
-    display: none;
+  .footer-payments-method {
+    min-width: 288px;
+    max-width: 545px;
+    height: 65px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 32px;
   }
 
   .footer-more-info-wrapper {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    border-top: 1px solid #ccc;
     padding-top: 24px;
+    padding-inline: 16px;
+    padding-bottom: 16px;
     gap: 24px;
+    text-align: center;
   }
 
   .footer-more-info-wrapper p {
@@ -138,54 +140,37 @@
     max-width: 800px;
   }
 
-  @media (max-width: 768px) {
-    .footer-link-group-wrapper {
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
-    .ul-footer-header {
-      margin-bottom: 0;
-      padding: 16px 0;
-      border-bottom: 1px solid #ccc;
-    }
-    .footer-link-desktop {
-      display: none;
-    }
-    .footer-link-mobile {
-      display: block;
-    }
-    .colapse-ul-footer {
-      display: block;
-    }
-    .ul-footer {
-      display: none;
-    }
-    .ul-footer.active {
-      display: flex;
-      padding: 16px 0;
-    }
-  }
-
-  .footer-payments-method {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-
-  .footer-more-info-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-  }
-
-  .footer-companies-logo {
+  .footer-more-logos {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 24px;
+  }
+
+  /* TABLET+ */
+
+  @media (min-width: 768px) {
+    .footer-link-group-wrapper {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+    }
+    .ul-footer-header {
+      border: none;
+    }
+    .footer-link-desktop {
+      display: block;
+    }
+
+    .footer-link-mobile {
+      display: none;
+    }
+
+    .ul-footer-header button {
+      display: none;
+    }
+
+    .ul-footer {
+      display: flex;
+    }
   }
 }

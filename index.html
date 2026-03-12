@@ -12,16 +12,16 @@
       rel="stylesheet"
     />
     <!-- css -->
-    <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./css/header.css" />
-    <link rel="stylesheet" href="./css/footer.css" />
-    <link rel="stylesheet" href="./css/main/about-section.css" />
-    <link rel="stylesheet" href="./css/main/contact-section.css" />
-    <link rel="stylesheet" href="./css/main/hero-section.css" />
-    <link rel="stylesheet" href="./css/main/products-section.css" />
-    <link rel="stylesheet" href="./css/main/main-product-ad.css" />
+    <link rel="stylesheet" href="./src/css/index.css" />
+    <link rel="stylesheet" href="./src/css/header.css" />
+    <link rel="stylesheet" href="./src/css/main/hero.css" />
+    <link rel="stylesheet" href="./src/css/main/product-carousel.css" />
+    <link rel="stylesheet" href="./src/css/main/main-product-ad.css" />
+    <link rel="stylesheet" href="./src/css/main/about-section.css" />
+    <link rel="stylesheet" href="./src/css/main//newsletter.css" />
+    <link rel="stylesheet" href="./src/css/footer.css" />
     <!-- js -->
-    <script src="./js/index.js" type="module"></script>
+    <script src="./src/js/main.js" type="module"></script>
   </head>
   <body>
     <header>
@@ -41,7 +41,7 @@
           </p>
         </div>
         <!-- Conteúdo principal -->
-        <div class="header-main container">
+        <div class="header-main">
           <!-- Menu mobile -->
           <button class="menu-btn" aria-label="Abrir menu">
             <svg class="icon-menu"></svg>
@@ -50,7 +50,6 @@
           <!-- Logo -->
           <a href="/" class="logo">
             <svg class="svg-avanti-header-logo"></svg>
-            <img src="/logo.svg" alt="Avanti" />
           </a>
 
           <!-- Busca -->
@@ -78,7 +77,7 @@
         </div>
 
         <!-- Navegação -->
-        <nav class="nav container">
+        <nav class="nav">
           <button class="categories-btn">
             <i class="icon-menu"></i>
             Todas as Categorias
@@ -95,7 +94,7 @@
       <section class="hero-section">
         <div class="hero-section-wrapper">
           <div class="hero-image-wrapper">
-            <img src="./public/hero-product.png" alt="" />
+            <img src="./src/public/hero-product.png" alt="" />
           </div>
           <div class="hero-content" style="text-transform: uppercase">
             <h2>
@@ -110,41 +109,41 @@
           </div>
         </div>
       </section>
-      <section class="products-section container">
-        <div class="products-header">
+      <section class="product-carousel">
+        <div class="product-carousel-header">
           <h2>Lançamentos</h2>
           <a href="#" class="view-all"
             >Ver todos <span class="view-all-indicator"></span
           ></a>
         </div>
-        <div id="products-grid" class="products-grid"></div>
+        <div class="product-carousel-container">
+          <div class="product-carousel-wrapper"></div>
+        </div>
       </section>
       <section class="main-product-secondary-ad">
-        <div class="main-product-secondary-ad-wrapper">
-          <div class="main-product-secondary-ad-image-wrapper">
-            <img class="main-product-secondary-ad-image" />
-          </div>
-          <div class="main-product-secondary-ad-content">
-            <h3>Loren ipsum</h3>
-            <p>
-              Duis consectetur metus nec lacus auctor dignissim. Mauris vitae
-              finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras
-              efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed
-              lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas
-              fringilla porttitor tortor eget lacinia. Donec sollicitudin
-              euismod orci, auctor fringilla magna consequat interdum. Fusce
-              sagittis elit a libero commodo egestas efficitur id augue.
-            </p>
-            <p>
-              Duis consectetur metus nec lacus auctor dignissim. Mauris vitae
-              finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras
-              efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed
-              lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas
-              fringilla porttitor tortor eget lacinia. Donec sollicitudin
-              euismod orci, auctor fringilla magna consequat interdum. Fusce
-              sagittis elit a libero commodo egestas efficitur id augue.
-            </p>
-          </div>
+        <div class="main-product-secondary-ad-image-wrapper">
+          <img class="main-product-secondary-ad-image" />
+        </div>
+        <div class="main-product-secondary-ad-content">
+          <h3>Loren ipsum</h3>
+          <p>
+            Duis consectetur metus nec lacus auctor dignissim. Mauris vitae
+            finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras
+            efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed
+            lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas
+            fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod
+            orci, auctor fringilla magna consequat interdum. Fusce sagittis elit
+            a libero commodo egestas efficitur id augue.
+          </p>
+          <p>
+            Duis consectetur metus nec lacus auctor dignissim. Mauris vitae
+            finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras
+            efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed
+            lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas
+            fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod
+            orci, auctor fringilla magna consequat interdum. Fusce sagittis elit
+            a libero commodo egestas efficitur id augue.
+          </p>
         </div>
       </section>
       <section class="main-product-first-ad">
@@ -154,7 +153,7 @@
           </div>
           <div class="main-product-first-ad-content">
             <h3>Loren ipsum</h3>
-            <div id="features-list" class="features-list">
+            <div class="features-list" class="features-list">
               <!-- repetidos por script -->
             </div>
           </div>
@@ -163,7 +162,7 @@
       <section class="main-product-secondary-ad"></section>
       <section class="about-section">
         <div class="about-image-wrapper">
-          <img class="about-image" src="./public/avanti-studeo.png" alt="" />
+          <img class="about-image" src="./src/public/avanti-studeo.png" alt="" />
           <div class="about-message-wrapper">
             <p class="about-message">
               Entre em contato conosco e verifique a disponibilidade para sua
@@ -173,9 +172,14 @@
         </div>
         <div class="newsletter-wrapper">
           <h6 class="">Cadastre-se na nossa <span>newsletter</span></h6>
-          <form class="newsletter-input-area">
-            <input type="text" placeholder="Digite seu nome" />
-            <input type="email" placeholder="Digite seu e-mail" />
+          <form class="newsletter-form">
+            <input id="name-input" type="text" placeholder="Digite seu nome" />
+            <input
+              id="email-input"
+              type="email"
+              placeholder="Digite seu e-mail"
+            />
+
             <div class="checkbox-wrapper">
               <input type="checkbox" id="accept-policy-terms" />
               <label for="accept-policy-terms"
@@ -183,7 +187,7 @@
                 <span>Política de Privacidade</span></label
               >
             </div>
-            <button>Cadastrar</button>
+            <button class="button-primary">Cadastrar</button>
           </form>
         </div>
       </section>
@@ -194,95 +198,20 @@
           <svg class="svg-footer-avanti-logo-social-media"></svg>
           <div class="footer-social-media"></div>
         </div>
-        <div class="footer-link-group-wrapper">
-          <div class="footer-link-group">
-            <div class="ul-footer-header">
-              <h5 class="footer-link-mobile">Institucional</h5>
-              <h4 class="footer-link-desktop">Institucional</h4>
-              <button class="colapse-ul-footer"></button>
-            </div>
-            <ul class="ul-footer">
-              <li>
-                <h6>Sobre nós</h6>
-                <h5>Sobre nós</h5>
-              </li>
-              <li>
-                <h6>Nossas Lojas</h6>
-                <h5>Nossas Lojas</h5>
-              </li>
-              <li>
-                <h6>Privacidade e segurança</h6>
-                <h5>Privacidade e segurança</h5>
-              </li>
-              <li>
-                <h6>Termos e condições</h6>
-                <h5>Termos e condições</h5>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-link-group">
-            <div class="ul-footer-header">
-              <h5 class="footer-link-mobile">Central de ajuda</h5>
-              <h4 class="footer-link-desktop">Central de ajuda</h4>
-              <button class="colapse-ul-footer"></button>
-            </div>
-            <ul class="ul-footer">
-              <li>
-                <h6>Fale Conosco</h6>
-                <h5>Fale Conosco</h5>
-              </li>
-              <li>
-                <h6>Frete e Entrega</h6>
-                <h5>Frete e Entrega</h5>
-              </li>
-              <li>
-                <h6>Trocas e Devoluções</h6>
-                <h5>Trocas e Devoluções</h5>
-              </li>
-              <li>
-                <h6>Formas de Pagamento</h6>
-                <h5>Formas de Pagamento</h5>
-              </li>
-              <li>
-                <h6>FAQ</h6>
-                <h5>FAQ</h5>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-link-group">
-            <div class="ul-footer-header">
-              <h5 class="footer-link-mobile">Atendimento</h5>
-              <h4 class="footer-link-desktop">Atendimento</h4>
-              <button class="colapse-ul-footer"></button>
-            </div>
-            <ul class="ul-footer">
-              <li>
-                <h6>Telefone</h6>
-                <h5>Telefone</h5>
-                <p>(00) 1234-5678</p>
-              </li>
-              <li>
-                <h6>Email</h6>
-                <h5>Email</h5>
-                <p>exemplo@exemplo.com.br</p>
-              </li>
-              <li>
-                <h6>Horário de atendimento</h6>
-                <h5>Horário de atendimento</h5>
-                <p>Sábado a sábados: 7:</p>
-                <p>Sábado: 09:00 - 17:00</p>
-              </li>
-            </ul>
-          </div>
-        </div>
+
+        <div class="footer-link-group-wrapper"></div>
+
         <div class="footer-payments-method"></div>
-        <div class="footer-more-info-wrapper">
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-            volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.
-          </p>
-          <div class="footer-companies-logo"></div>
+
+        <div style="background-color: var(--color-light-bg)">
+          <div class="footer-more-info-wrapper">
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+              erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.
+            </p>
+            <div class="footer-more-logos"></div>
+          </div>
         </div>
       </div>
     </footer>
