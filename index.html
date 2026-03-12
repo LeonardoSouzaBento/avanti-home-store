@@ -13,13 +13,13 @@
     />
     <!-- css -->
     <link rel="stylesheet" href="./src/css/index.css" />
-    <link rel="stylesheet" href="./src/css/header.css" />
+    <link rel="stylesheet" href="./src/css/header/header.css" />
     <link rel="stylesheet" href="./src/css/main/hero.css" />
     <link rel="stylesheet" href="./src/css/main/product-carousel.css" />
     <link rel="stylesheet" href="./src/css/main/main-product-ad.css" />
     <link rel="stylesheet" href="./src/css/main/about-section.css" />
     <link rel="stylesheet" href="./src/css/main//newsletter.css" />
-    <link rel="stylesheet" href="./src/css/footer.css" />
+    <link rel="stylesheet" href="./src/css/footer/footer.css" />
     <!-- js -->
     <script src="./src/js/main.js" type="module"></script>
   </head>
@@ -93,16 +93,18 @@
     <main>
       <section class="hero-section">
         <div class="hero-section-wrapper">
-          <div class="hero-image-wrapper">
-            <img src="./src/public/hero-product.png" alt="" />
-          </div>
-          <div class="hero-content" style="text-transform: uppercase">
-            <h2>
-              SUPER <br class="to-mobile" />
-              <span>SALE</span>
-            </h2>
-            <p>Selected items up to</p>
-            <h3>50%off</h3>
+          <div class="hero-container">
+            <div class="hero-image-wrapper">
+              <img src="./src/public/hero-product.png" alt="" />
+            </div>
+            <div class="hero-content" style="text-transform: uppercase">
+              <h2>
+                SUPER <br class="to-mobile" />
+                <span>SALE</span>
+              </h2>
+              <p>Selected items up to</p>
+              <h3>50%off</h3>
+            </div>
           </div>
           <div class="pagination-wrapper">
             <span class="pagination-span"></span>
@@ -120,46 +122,9 @@
           <div class="product-carousel-wrapper"></div>
         </div>
       </section>
-      <section class="main-product-secondary-ad">
-        <div class="main-product-secondary-ad-image-wrapper">
-          <img class="main-product-secondary-ad-image" />
-        </div>
-        <div class="main-product-secondary-ad-content">
-          <h3>Loren ipsum</h3>
-          <p>
-            Duis consectetur metus nec lacus auctor dignissim. Mauris vitae
-            finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras
-            efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed
-            lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas
-            fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod
-            orci, auctor fringilla magna consequat interdum. Fusce sagittis elit
-            a libero commodo egestas efficitur id augue.
-          </p>
-          <p>
-            Duis consectetur metus nec lacus auctor dignissim. Mauris vitae
-            finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras
-            efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed
-            lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas
-            fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod
-            orci, auctor fringilla magna consequat interdum. Fusce sagittis elit
-            a libero commodo egestas efficitur id augue.
-          </p>
-        </div>
-      </section>
-      <section class="main-product-first-ad">
-        <div class="main-product-first-ad-wrapper">
-          <div class="main-product-first-ad-image-wrapper">
-            <img class="main-product-first-ad-image" />
-          </div>
-          <div class="main-product-first-ad-content">
-            <h3>Loren ipsum</h3>
-            <div class="features-list" class="features-list">
-              <!-- repetidos por script -->
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="main-product-secondary-ad"></section>
+      <section class="main-product-second-ad"></section>
+      <section class="main-product-first-ad"></section>
+      <section class="main-product-second-ad"></section>
       <section class="about-section">
         <div class="about-image-wrapper">
           <img
@@ -203,9 +168,10 @@
           <div class="footer-social-media"></div>
         </div>
 
-        <div class="footer-link-group-wrapper"></div>
-
-        <div class="footer-payments-method"></div>
+        <div class="footer-links-and-payments-wrapper">
+          <div class="footer-link-group-wrapper"></div>
+          <div class="footer-payments-method"></div>
+        </div>
       </div>
       <div class="footer-more-info-container">
         <div class="footer-more-info-wrapper">

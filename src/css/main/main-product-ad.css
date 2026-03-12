@@ -31,7 +31,8 @@
     line-height: 1.4;
   }
 
-  .main-product-secondary-ad, .main-product-first-ad {
+  .main-product-second-ad,
+  .main-product-first-ad {
     max-width: 1177px;
     margin-inline: auto;
     display: flex;

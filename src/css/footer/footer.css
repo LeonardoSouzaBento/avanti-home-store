@@ -163,6 +163,7 @@
     .footer-link-group-wrapper {
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 32px;
+      border: none;
     }
     .ul-footer-header {
       border: none;

@@ -3,13 +3,15 @@ import {
   footerSvgs,
   products,
   icons,
-  mainProductAdFeatures,
+  mainProductAd,
+  secondaryProductAds,
 } from "../data/index.js";
 import {
   insertFooterLinkGroup,
   insertFooterSvgGroup,
-  insertMainProductFirstAdFeatures,
   insertCarouselProductCards,
+  insertMainProductFirstAd,
+  insertMainProductSecondAds,
 } from "./index.js";
 
 function insertSvg() {
@@ -42,8 +44,9 @@ function insertSvg() {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  insertMainProductFirstAdFeatures(mainProductAdFeatures);
   insertCarouselProductCards(products);
+  insertMainProductSecondAds(secondaryProductAds);
+  insertMainProductFirstAd(mainProductAd);
   insertFooterLinkGroup(footerLinkGroups);
   insertFooterSvgGroup(footerSvgs, icons);
   insertSvg();
