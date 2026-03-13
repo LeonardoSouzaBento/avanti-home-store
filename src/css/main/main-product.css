@@ -99,14 +99,14 @@
   .main-product-wrapper2 {
     display: flex;
     flex-direction: column;
-    gap: 38px;
     margin-top: 56px;
+    gap: 38px;
   }
   .main-product-image-wrapper2 {
     min-width: 391px;
     min-height: 390px;
     position: relative;
-    background-color: #C2C2C2;
+    background-color: #c2c2c2;
   }
   .main-product-image2 {
     width: 100%;
@@ -121,7 +121,14 @@
     text-transform: uppercase;
     margin-bottom: 18px;
   }
-  .main-product-content2{
+
+  .main-product-content2 {
     padding: 0 24px 46px;
+    /* padding-top: 38px; */
+  }
+
+  .main-product-content2 > p {
+    font-size: 14px;
+    font-family: var(--font-body);
   }
 }

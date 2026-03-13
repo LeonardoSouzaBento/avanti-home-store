@@ -49,40 +49,37 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 12px;
     padding: 2rem;
-    margin-right: 0;
-    margin-top: auto;
     width: 90%;
-    margin-bottom: 4rem;
     border-radius: 12px;
   }
 
-  .hero-content h2 {
-    font-size: clamp(3rem, 5vw, 5rem);
+  .hero-content-title {
+    font-size: clamp(40px, calc(39.968734px + 3.126628vw), 100px);
     font-weight: 700;
     line-height: 1.1;
     color: #000;
     text-align: center;
-    margin-bottom: 2rem;
     letter-spacing: -1px;
   }
 
-  .hero-content h2 span {
+  .hero-content-title span {
     font-weight: 300;
   }
 
-  .hero-content p {
-    font-size: clamp(1rem, 2vw, 1.125rem);
+  .hero-content-subtitle {
+    font-size: clamp(12px, calc(11.993226px + 0.677436vw), 25px);
     font-weight: 700;
     color: var(--color-theme);
-    margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    font-family: var(--font-title);
   }
 
-  .hero-content h3 {
-    font-size: clamp(2.5rem, 4.5vw, 4.5rem);
-    font-weight: 800;
+  .hero-content-discount {
+    font-size: 32px;
+    font-weight: 700;
     color: var(--color-theme);
     line-height: 1;
   }

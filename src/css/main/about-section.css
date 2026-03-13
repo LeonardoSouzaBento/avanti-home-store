@@ -31,7 +31,7 @@
   .about-message-wrapper {
     width: 100%;
     background-color: var(--color-theme);
-    padding: 1.5rem 2rem;
+    padding: 18px;
     text-align: center;
     z-index: 2;
   }

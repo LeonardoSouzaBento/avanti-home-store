@@ -37,39 +37,37 @@
         </p>
       </div>
       <div class="header-wrapper">
-        <div class="header-top">
-          <button class="menu-btn for-mobile">
-            <svg class="svg-menu"></svg>
-          </button>
+        <button class="menu-btn for-mobile">
+          <svg class="svg-menu"></svg>
+        </button>
 
-          <div class="logo">
-            <svg class="svg-avanti-header-logo"></svg>
-          </div>
+        <div class="header-logo-wrapper">
+          <svg class="svg-avanti-header-logo"></svg>
+        </div>
 
-          <div class="header-actions">
-            <a href="#" class="user not-for-mobile">
-              <span class="icon-user"></span>
-              <span class="user-text">
-                Olá,<br />
-                Nome cliente!
-              </span>
-            </a>
+        <div class="header-actions">
+          <a href="#" class="user not-for-mobile">
+            <span class="icon-user"></span>
+            <span class="user-text">
+              Olá,<br />
+              Nome cliente!
+            </span>
+          </a>
 
-            <a href="#" class="cart">
-              <svg class="svg-header-cart"></svg>
-              <span class="cart-count">2</span>
-            </a>
-          </div>
+          <a href="#" class="cart">
+            <svg class="svg-header-cart"></svg>
+            <span class="cart-count">2</span>
+          </a>
         </div>
 
         <div class="header-search">
           <input type="text" placeholder="Digite aqui o que você procura" />
-          <button class="search-btn">
+          <button class="search-button">
             <svg class="svg-search"></svg>
           </button>
         </div>
       </div>
-      <nav class="nav">
+      <nav class="nav not-for-mobile">
         <button>
           <svg class="svg-all-cats-menu-icon"></svg>
           Todas as Categorias
@@ -89,12 +87,12 @@
               <img src="./src/public/hero-product.png" alt="" />
             </div>
             <div class="hero-content" style="text-transform: uppercase">
-              <h2>
+              <h2 class="hero-content-title">
                 SUPER <br class="for-mobile" />
                 <span>SALE</span>
               </h2>
-              <p>Selected items up to</p>
-              <h3>50%off</h3>
+              <p class="hero-content-subtitle">Selected items up to</p>
+              <h3 class="hero-content-discount">50%off</h3>
             </div>
           </div>
           <div class="pagination-wrapper">
@@ -122,7 +120,9 @@
           </div>
         </div>
         <div class="newsletter-wrapper">
-          <h6 class="newsletter-title">Cadastre-se na nossa <span>newsletter</span></h6>
+          <h6 class="newsletter-title">
+            Cadastre-se na nossa <span>newsletter</span>
+          </h6>
           <form class="newsletter-form">
             <input id="name-input" type="text" placeholder="Digite seu nome" />
             <input

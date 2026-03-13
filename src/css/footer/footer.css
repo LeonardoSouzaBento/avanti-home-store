@@ -117,11 +117,9 @@
   }
 
   .footer-payments-method {
-    height: auto;
     min-width: 288px;
     width: 100%;
     max-width: 545px;
-    height: 65px;
     margin-inline: auto;
     padding-top: 48px;
     padding-bottom: 40px;
@@ -130,8 +128,12 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 32px;
+    position: relative;
   }
-
+  .footer-payments-method > svg {
+    height: max-content;
+    width: max-content;
+  }
   .footer-more-info-container {
     width: 100%;
     background-color: var(--color-light-bg);
