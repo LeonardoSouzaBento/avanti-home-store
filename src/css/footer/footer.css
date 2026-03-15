@@ -6,7 +6,7 @@
     background: #f5f5f5;
   }
 
-  .footer-main-wrapper {
+  footer .main-wrapper {
     width: 100%;
     max-width: 1163px;
     display: flex;
@@ -82,14 +82,14 @@
   }
 
   @media screen and (min-width: 768px) {
-    .footer-main-wrapper {
+    footer .main-wrapper {
       padding-inline: 40px;
     }
   }
 
   /* TABLET+ */
   @media screen and (min-width: 1024px) {
-    .footer-main-wrapper {
+    footer .main-wrapper {
       max-width: 1163px;
       flex-direction: row;
       justify-content: space-between;

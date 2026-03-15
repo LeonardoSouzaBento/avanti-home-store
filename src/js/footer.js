@@ -2,7 +2,7 @@ export function insertFooterSvgGroup(footerSvgs, icons) {
   const parentsClass = Object.keys(footerSvgs);
 
   parentsClass.forEach((className) => {
-    const parents = document.getElementsByClassName(className);
+    const parents = document.querySelectorAll(`footer .${className}`);
     const svgGroup = footerSvgs[className];
 
     [...parents].forEach((parent) => {

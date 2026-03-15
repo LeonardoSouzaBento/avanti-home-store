@@ -11,14 +11,14 @@ export function insertMainProductSections(data) {
 
     section.innerHTML = `
     <div class="main-product-wrapper">
-      <div class="main-product-image-wrapper">
+      <div class="image-wrapper">
         <img
           src="${content.image}"
-          class="main-product-image"
+          class="product-image"
         />
       </div>
 
-      <div class="main-product-content">
+      <div class="content">
         <h3 class="main-product-title">${content.title}</h3>
         ${paragraphs}
       </div>
