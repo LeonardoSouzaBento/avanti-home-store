@@ -64,6 +64,12 @@ export function insertCarouselProducts(carousels) {
           </button>
         </div>
       </div>
+
+      <div class="flex-center" style="margin-top: 16px; gap: 4px;">
+        <span class="pagination-span active"></span>
+        <span class="pagination-span"></span>
+        <span class="pagination-span"></span>
+      </div>
     `;
   });
 }

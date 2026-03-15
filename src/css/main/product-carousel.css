@@ -92,12 +92,14 @@
 
   .product-price-container {
     display: flex;
-    gap: 4px;
+    gap: 14px;
   }
 
-  .product-price-wrapper {
-    display: flex;
-    flex-direction: column;
+  @media screen and (min-width: 768px) {
+    .product-price-container {
+      align-items: center;
+      gap: 8px;
+    }
   }
 
   .product-badge {
@@ -110,22 +112,7 @@
     border-radius: 4px;
     text-transform: uppercase;
   }
-  .product-badge.new {
-    left: 0px;
-    background-color: var(--color-new-product-label-bg);
-  }
-  /* Frame 49 */
 
-  /* Auto layout */
-  .discount {
-    position: relative;
-    height: 20px;
-    width: 64px;
-    border-radius: 4px;
-    color: var(--color-text-light-foreground);
-    background-color: var(--color-product-discount-label-bg);
-    font-size: 12px;
-  }
   .product-info {
     display: flex;
     flex-direction: column;
@@ -139,9 +126,27 @@
     color: #303030;
     overflow: hidden;
   }
-  .product-info {
+  @media screen and (min-width: 768px) {
+    .product-name {
+      margin-bottom: 4px;
+    }
+  }
+  .product-price-wrapper {
     display: flex;
     flex-direction: column;
+  }
+  .discount {
+    position: relative;
+    height: 20px;
+    width: 64px;
+    border-radius: 4px;
+    color: var(--color-text-light-foreground);
+    background-color: var(--color-product-discount-label-bg);
+    font-size: 12px;
+  }
+  .product-badge.new {
+    left: 0px;
+    background-color: var(--color-new-product-label-bg);
   }
   .product-old-price {
     font-size: var(--text-xs);
@@ -159,5 +164,6 @@
   }
   .product-buy-btn {
     font-size: 14px;
+    margin-top: clamp(8px, calc(5.960784px + 0.522876vw), 16px);
   }
 }

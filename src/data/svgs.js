@@ -1,4 +1,5 @@
 export const icons = {
+  "header-user":``,
   "arrow-down": `<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M10.5 3.17937e-09L12 1.5285L6 7.5L3.23978e-09 1.5285L1.5 2.22556e-08L6 4.5L10.5 3.17937e-09Z" fill="#005CFF"/>
 </svg>
@@ -52,6 +53,7 @@ export const icons = {
       height="25"
       viewBox="0 0 26 25"
       fill="none"
+      strokeWidth="3"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

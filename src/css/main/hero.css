@@ -99,10 +99,14 @@
   .pagination-span {
     width: 7px;
     height: 7px;
-    background-color: #333;
+    background: #838383;
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
+  }
+
+  .pagination-span.active {
+    background-color: #333;
   }
 
   /* TABLET / DESKTOP (>=768px) */

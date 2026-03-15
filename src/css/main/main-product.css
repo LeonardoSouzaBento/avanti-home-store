@@ -19,7 +19,7 @@
 @layer components {
   .main-product-wrapper {
     gap: clamp(21px, calc(16.794118px + 1.078431vw), 37.5px);
-    margin-bottom: clamp(56px, calc(45.803922px + 2.614379vw), 96px);
+    margin-bottom: 56px;
     justify-content: center;
     align-items: center;
   }
@@ -29,8 +29,9 @@
     width: clamp(390px, calc(323.215686px + 17.124183vw), 652px);
     position: relative;
     background: #c2c2c2;
-    padding-inline: 21px;
-    padding-top: 28px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
   }
 
   @media screen and (max-width: 390px) {
@@ -40,8 +41,10 @@
   }
 
   .main-product .product-image {
-    width: 100%;
-    height: 100%;
+    width: calc(100% - 42px);
+    height: calc(100% - 56px);
+    margin-left: 21px;
+    margin-top: 28px;
   }
 
   .main-product .content {
