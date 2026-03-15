@@ -1,0 +1,2 @@
+Titulos com tamanhos pequenos; falta de hierarquia de tamanhos nos títulos.
+Tamanho muito pequeno em muitos textos: 12px.

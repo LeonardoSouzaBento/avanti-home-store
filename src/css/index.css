@@ -46,6 +46,12 @@
   body::-webkit-scrollbar {
     display: none;
   }
+  .scrollbar-hidden {
+    scrollbar-width: none;
+  }
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
   a {
     text-decoration: none;
   }
@@ -95,7 +101,13 @@
     outline: none;
     border: none;
     background-color: transparent;
+    font-weight: 700;
   }
+
+  svg {
+    display: inline-flex !important;
+  }
+
   .button-primary {
     width: 100%;
     height: 40px;
@@ -107,6 +119,11 @@
     border: none;
     cursor: pointer;
     transition: opacity 0.2s;
+  }
+  .btn-outline {
+    background-color: transparent;
+    border: 1.25px solid white;
+    color: white;
   }
   .button-icon {
     height: 36px;
@@ -135,7 +152,6 @@
       display: block;
     }
   }
-
   .flex-center {
     display: flex;
     justify-content: center;

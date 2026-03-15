@@ -43,10 +43,10 @@
 
         <div class="header-actions">
           <a href="#" class="user not-for-mobile">
-            <span class="icon-user"></span>
+            <svg class="svg-header-user icon-user"></svg>
             <span class="user-text">
-              Olá,<br />
-              Nome cliente!
+              <p>Olá,</p>
+              <p>Nome cliente!</p>
             </span>
           </a>
 
@@ -63,16 +63,77 @@
           </button>
         </div>
       </div>
-      <nav class="nav not-for-mobile">
-        <button>
-          <svg class="svg-all-cats-menu-icon"></svg>
-          Todas as Categorias
-        </button>
 
-        <ul class="nav-list not-for-mobile">
-          <li><a href="#">Departamento</a></li>
-        </ul>
-        <menu></menu>
+      <nav class="not-for-mobile" style="display: none">
+        <manu class="fast-menu">
+          <button class="cat-btn">
+            <svg class="svg-all-cats-menu-icon"></svg>
+            Todas as Categorias
+          </button>
+
+          <a href="#">Departamento</a>
+          <a href="#">Departamento</a>
+        </manu>
+
+        <div>
+          <menu class="menu-container">
+            <div class="menus-wrapper">
+              <div class="departments-menu">
+                <menu class="departments-list scrollbar-hidden">
+                  <button class="active">
+                    Departamento
+                    <svg
+                      class="svg-chevron-right"
+                      stroke="blue"
+                      stroke-width="0.1"
+                      fill="none"
+                    ></svg>
+                  </button>
+                  <button>
+                    Departamento
+                    <svg class="svg-chevron-right"></svg>
+                  </button>
+                </menu>
+                <div class="scrollbar-y">
+                  <div class="scrollbar-y-thumb"></div>
+                </div>
+              </div>
+              <menu class="cats-menu">
+                <h4 class="title">Departamento</h4>
+                <div class="ul-wrapper">
+                  <ul>
+                    <li class="list-title">
+                      <h5 class="title">Categoria</h5>
+                    </li>
+                    <li><a href="">Categoria</a></li>
+                    <li><a href="">Categoria</a></li>
+                  </ul>
+                  <ul>
+                    <li class="list-title">
+                      <h5>Categoria</h5>
+                    </li>
+                    <li><a href="">Categoria</a></li>
+                    <li><a href="">Categoria</a></li>
+                  </ul>
+                  <ul>
+                    <li class="list-title">
+                      <h5>Categoria</h5>
+                    </li>
+                    <li><a href="">Categoria</a></li>
+                    <li><a href="">Categoria</a></li>
+                  </ul>
+                </div>
+              </menu>
+            </div>
+            <div class="menu-image-wrapper">
+              <p>
+                Confira os produtos<br /><span>Que acabaram De chegar!</span>
+              </p>
+              <button class="btn-outline">Ver todos</button>
+              <img src="./src/public/main-product.png" alt="" />
+            </div>
+          </menu>
+        </div>
       </nav>
     </header>
     <main>
