@@ -107,11 +107,14 @@
     padding-bottom: clamp(28px, calc(22.392157px + 1.437908vw), 50px);
   }
   #main-product-image-wrapper {
-    max-width: clamp(349px, calc(271.764706px + 19.803922vw), 652px);
+    width: 100%;
+    max-width: clamp(390px, calc(323.215686px + 17.124183vw), 652px);
+    min-height: 349px;
     height: clamp(349px, calc(252.392157px + 24.771242vw), 728px);
-    flex: none;
+    flex: auto;
     position: relative;
     margin: 0 auto;
+    box-sizing: border-box;
   }
   #main-product-image-wrapper img {
     width: 100%;
@@ -127,12 +130,29 @@
 
   #main-product-content {
     height: 100%;
-    width: clamp(350px, calc(317.882353px + 8.235294vw), 476px);
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex: auto;
     align-items: center;
     margin: 0 auto;
+  }
+
+  @media screen and (min-width: 430px) {
+    #main-product-content {
+      width: clamp(390px, calc(323.215686px + 17.124183vw), 652px);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    #main-product-content {
+      max-width: clamp(350px, calc(319.411765px + 7.843137vw), 470px);
+      margin: 0;
+    }
+    #main-product-image-wrapper {
+      width: clamp(390px, calc(323.215686px + 17.124183vw), 652px);
+    }
   }
 
   /* Features List */
