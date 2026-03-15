@@ -13,7 +13,7 @@ export function insertCarouselProductCards(products) {
       </div>
       <div class="product-info">
         <h4 class="product-name">${product.name}</h4>
-        <div class="product-prices">
+        <div class="product-info">
           <div class="product-price-wrapper">
             <span class="product-old-price">${product.oldPrice}</span>
             <span class="product-price">${product.price}</span>

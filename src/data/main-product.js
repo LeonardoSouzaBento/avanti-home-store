@@ -1,4 +1,4 @@
-export const aboutsMainProduct = Array.from({ length: 2 }, (_, index) => ({
+export const mainProductSections = Array.from({ length: 2 }, (_, index) => ({
   id: `main-product-${index + 1}`,
   image: "./src/public/main-product-2.png",
   title: "Loren ipsum",
@@ -9,7 +9,8 @@ export const aboutsMainProduct = Array.from({ length: 2 }, (_, index) => ({
   ),
 }));
 
-export const singleAboutMainProduct = {
+export const mainProductSingleSection = {
+  id: "main-product",
   image: "./src/public/main-product.png",
   title: "Loren ipsum",
   features: Array.from({ length: 3 }, () => ({

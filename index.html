@@ -13,15 +13,11 @@
     />
     <!-- css -->
     <link rel="stylesheet" href="./src/css/index.css" />
-    <link rel="stylesheet" href="./src/css/header/header.css" />
-    <link rel="stylesheet" href="./src/css/main/hero.css" />
-    <link rel="stylesheet" href="./src/css/main/product-carousel.css" />
-    <link rel="stylesheet" href="./src/css/main/main-product.css" />
-    <link rel="stylesheet" href="./src/css/main/about-section.css" />
-    <link rel="stylesheet" href="./src/css/main//newsletter.css" />
-    <link rel="stylesheet" href="./src/css/footer/footer.css" />
+    <link rel="stylesheet" href="./src/css/header/index.css" />
+    <link rel="stylesheet" href="./src/css/main/index.css" />
+    <link rel="stylesheet" href="./src/css/footer/index.css" />
     <!-- js -->
-    <script src="./src/js/main.js" type="module"></script>
+    <script src="./src/js/index.js" type="module"></script>
   </head>
   <body>
     <header>
@@ -81,30 +77,37 @@
     </header>
     <main>
       <section class="hero-section">
-        <div class="hero-section-wrapper">
-          <div class="hero-container">
+        <div class="hero-section-container">
+          <div class="hero-content-wrapper">
             <div class="hero-image-wrapper">
               <img src="./src/public/hero-product.png" alt="" />
             </div>
-            <div class="hero-content" style="text-transform: uppercase">
-              <h2 class="hero-content-title">
-                SUPER <br class="for-mobile" />
-                <span>SALE</span>
+
+            <div class="hero-text-content">
+              <h2 class="title">
+                <span>SUPER<br class="for-mobile" /></span>
+                <span style="font-weight: 300">SALE</span>
               </h2>
-              <p class="hero-content-subtitle">Selected items up to</p>
+              <p class="hero-content-subtitle">Itens selecionados com até</p>
               <h3 class="hero-content-discount">50%off</h3>
             </div>
           </div>
           <div class="pagination-wrapper">
             <span class="pagination-span"></span>
+            <span class="pagination-span"></span>
+            <span class="pagination-span"></span>
           </div>
         </div>
       </section>
-      <section class="product-carousel-1"></section>
-      <section class="main-product2"></section>
-      <section class="main-product"></section>
-      <section class="main-product2"></section>
-      <section class="product-carousel-2 not-for-mobile"></section>
+      <section id="product-carousel-1" class="product-carousel"></section>
+      <section id="main-product-1" class="main-product"></section>
+      <section id="main-product" class="main-product"></section>
+      <section id="main-product-2" class="main-product"></section>
+      <section
+        id="product-carousel-2"
+        class="product-carousel not-for-mobile"
+        style="margin-bottom: 64px"
+      ></section>
       <section class="about-section">
         <div class="about-image-wrapper">
           <img
@@ -132,8 +135,8 @@
             />
 
             <div class="checkbox-wrapper">
-              <input type="checkbox" id="accept-policy-terms" />
-              <label for="accept-policy-terms"
+              <input type="checkbox" id="newsletter-checkbox" />
+              <label for="newsletter-checkbox"
                 >Estou de acordo com a
                 <span>Política de Privacidade</span></label
               >
@@ -144,17 +147,15 @@
       </section>
     </main>
     <footer>
-      <div class="footer-wrapper">
+      <div class="footer-main-wrapper">
         <div class="footer-social-media-wrapper">
           <svg class="svg-footer-avanti-logo-social-media"></svg>
           <div class="footer-social-media"></div>
         </div>
-
-        <div class="footer-links-and-payments-wrapper">
-          <div class="footer-link-group-wrapper"></div>
-          <div class="footer-payments-method"></div>
-        </div>
+        <div class="footer-link-group-wrapper"></div>
       </div>
+      <div class="footer-payments-method"></div>
+
       <div class="footer-more-info-container">
         <div class="footer-more-info-wrapper">
           <p>

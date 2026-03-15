@@ -64,7 +64,6 @@
   .header-search {
     height: 40px;
     margin-top: 12px;
-    max-width: 579px;
     padding-left: 19px;
     display: flex;
     grid-area: search;
@@ -82,7 +81,7 @@
   .header-search input::placeholder {
     color: var(--color-text-md-foreground);
     font-weight: 600;
-    font-family: var(--font-title);
+    font-family: var(--font-sans-rounded);
     font-size: var(--text-sm);
   }
 
@@ -93,11 +92,11 @@
     margin-right: 2px;
   }
 
-  .cart{
+  .cart {
     position: relative;
   }
 
-  .cart-count{
+  .cart-count {
     position: absolute;
     top: -6px;
     right: -6px;
@@ -128,6 +127,7 @@
 
     .header-search {
       margin-top: 0;
+      max-width: 579px;
     }
   }
 }

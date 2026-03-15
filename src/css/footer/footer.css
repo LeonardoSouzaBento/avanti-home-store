@@ -1,33 +1,30 @@
 @layer components {
   footer {
     width: 100%;
-    background-color: var(--color-medium-bg);
     color: var(--color-text-md-foreground);
     margin-top: 48px;
-    padding-top: 40px;
+    background: #f5f5f5;
   }
 
-  .footer-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .footer-wrapper > div {
+  .footer-main-wrapper {
     width: 100%;
     max-width: 1163px;
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
+    align-items: center;
+    gap: 40px;
+    padding-top: 40px;
   }
 
   .footer-social-media-wrapper {
     width: 194px;
-    margin: 0 auto;
+    height: max-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
     justify-content: space-between;
-    /* border: 1px solid red; */
   }
 
   .footer-social-media {
@@ -37,116 +34,37 @@
     gap: 40px;
   }
 
-  /* MOBILE */
-  .footer-link-group-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    border-top: 1px solid var(--color-border);
-  }
-
-  .ul-footer {
-    padding-inline: 12px;
-  }
-
-  .ul-footer-header {
-    height: 54px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-inline: 16px;
-    margin-bottom: 0;
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .ul-footer-header h4,
-  .ul-footer-header h5 {
-    font-size: var(--text-lg);
-    font-weight: 700;
-    color: var(--color-text-foreground);
-  }
-
-  .footer-link-desktop {
-    display: none;
-  }
-
-  .footer-link-mobile {
-    display: block;
-  }
-
-  .ul-footer {
-    list-style: none;
-    display: none;
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .ul-footer.active {
-    display: flex;
-    padding: 16px 0;
-  }
-
-  .ul-footer li h5 {
-    font-size: var(--text-base);
-    font-weight: 400;
-    cursor: pointer;
-    transition: color 0.2s;
-  }
-
-  .ul-footer li h5:hover {
-    color: var(--color-theme);
-  }
-
-  .ul-footer li h6 {
-    display: none;
-  }
-
-  .ul-footer li p {
-    font-size: var(--text-sm);
-    margin-top: 4px;
-    color: var(--color-text-md-foreground);
-  }
-
-  .ul-footer-header button {
-    display: block;
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    width: 24px;
-    height: 24px;
-  }
-
   .footer-payments-method {
-    min-width: 288px;
-    width: 100%;
-    max-width: 545px;
+    height: 64px;
+    width: clamp(288px, 50%, 545px);
+    box-sizing: content-box;
     margin-inline: auto;
-    padding-top: 48px;
+    padding-top: clamp(48px, calc(43.921569px + 1.045752vw), 64px);
     padding-bottom: 40px;
     display: flex;
+    flex: auto;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 32px;
+    column-gap: 32px;
+    row-gap: 20px;
     position: relative;
   }
-  .footer-payments-method > svg {
-    height: max-content;
-    width: max-content;
-  }
+
   .footer-more-info-container {
     width: 100%;
     background-color: var(--color-light-bg);
   }
 
   .footer-more-info-wrapper {
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 24px;
+    padding-top: clamp(24px, calc(19.921569px + 1.045752vw), 40px);
     padding-inline: 16px;
-    padding-bottom: 16px;
-    gap: 24px;
+    padding-bottom: clamp(16px, calc(9.882353px + 1.568627vw), 40px);
+    gap: 40px;
     text-align: center;
   }
 
@@ -163,31 +81,20 @@
     gap: 24px;
   }
 
+  @media screen and (min-width: 768px) {
+    .footer-main-wrapper {
+      padding-inline: 40px;
+    }
+  }
+
   /* TABLET+ */
-
-  @media (min-width: 768px) {
-    .footer-link-group-wrapper {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 32px;
-      border: none;
-    }
-    .ul-footer-header {
-      border: none;
-    }
-    .footer-link-desktop {
-      display: block;
-    }
-
-    .footer-link-mobile {
-      display: none;
-    }
-
-    .ul-footer-header button {
-      display: none;
-    }
-
-    .ul-footer {
-      display: flex;
+  @media screen and (min-width: 1024px) {
+    .footer-main-wrapper {
+      max-width: 1163px;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 142px;
+      align-items: start;
     }
   }
 }

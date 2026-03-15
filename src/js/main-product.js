@@ -1,22 +1,25 @@
-export function insertMainProductAbouts(ads) {
-  const sections = document.querySelectorAll(".main-product2");
-  ads.forEach((ad, index) => {
-    const section = sections[index];
+export function insertMainProductSections(data) {
+  const sections = data.map((content) => document.getElementById(content.id));
+  
+  sections.forEach((section, index) => {
+    const content = data[index];
     if (!section) return;
 
-    const paragraphs = ad.description.map((text) => `<p>${text}</p>`).join("</br>");
+    const paragraphs = content.description
+      .map((text) => `<p>${text}</p>`)
+      .join("</br>");
 
     section.innerHTML = `
-    <div class="main-product-wrapper2">
-      <div class="main-product-image-wrapper2">
+    <div class="main-product-wrapper">
+      <div class="main-product-image-wrapper">
         <img
-          src="${ad.image}"
-          class="main-product-image2"
+          src="${content.image}"
+          class="main-product-image"
         />
       </div>
 
-      <div class="main-product-content2">
-        <h3 class="main-product-title2">${ad.title}</h3>
+      <div class="main-product-content">
+        <h3 class="main-product-title">${content.title}</h3>
         ${paragraphs}
       </div>
     </div>
@@ -24,8 +27,8 @@ export function insertMainProductAbouts(ads) {
   });
 }
 
-export function insertSingleMainProductAbout(data) {
-  const section = document.querySelector(".main-product");
+export function insertMainProductSingleSection(data) {
+  const section = document.querySelector("#main-product");
 
   const features = data.features
     .map(
@@ -39,18 +42,15 @@ export function insertSingleMainProductAbout(data) {
     .join("");
 
   section.innerHTML = `
-    <div class="main-product-wrapper">
-      <div class="main-product-image-wrapper">
-        <img
-          src="${data.image}"
-          class="main-product-image"
-        />
+    <div id="main-product-wrapper">
+      <div id="main-product-image-wrapper">
+        <img src="${data.image}"/>
       </div>
 
-      <div class="main-product-content">
-        <h3>${data.title}</h3>
+      <div id="main-product-content">
+        <h3 id="main-product-title">${data.title}</h3>
 
-        <div class="features-list">
+        <div id="features-list">
           ${features}
         </div>
       </div>

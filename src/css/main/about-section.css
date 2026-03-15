@@ -9,14 +9,12 @@
   .about-image-wrapper {
     position: relative;
     width: 100%;
-    flex: auto;
+    height: clamp(449px, calc(448.890047px + 10.99531vw), 660px);
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 449px;
-    max-height: 660px;
     position: relative;
-        margin-bottom: 54px;
+    margin-bottom: 54px;
   }
 
   .about-image-wrapper img {
@@ -38,7 +36,7 @@
 
   .about-message {
     color: #fff;
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    font-size: clamp(16px, calc(15.992705px + 0.729547vw), 30px);
     font-weight: 500;
     margin: 0;
     line-height: 1.4;

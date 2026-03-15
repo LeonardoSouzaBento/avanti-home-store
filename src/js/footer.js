@@ -28,8 +28,8 @@ export function insertFooterLinkGroup(groups) {
 
         return `
         <li>
-          <h6>${link.text}</h6>
-          <h5>${link.text}</h5>
+          <h5 class="not-for-mobile li-title-desktop">${link.text}</h5>
+          <h6 class="for-mobile li-title-mobile">${link.text}</h6>
           ${extraHTML}
         </li>
       `;
@@ -38,14 +38,14 @@ export function insertFooterLinkGroup(groups) {
 
     groupDiv.innerHTML = `
       <div class="ul-footer-header">
-        <h5 class="footer-link-mobile">${group.title}</h5>
-        <h4 class="footer-link-desktop">${group.title}</h4>
-        <button>
+        <h4 class="not-for-mobile title">${group.title}</h4>
+        <h5 class="for-mobile title">${group.title}</h5>
+        <button class="for-mobile">
           <svg class="svg-arrow-down"></svg>
         </button>
       </div>
 
-      <ul class="ul-footer">
+      <ul class="ul-footer not-for-mobile">
         ${linksHTML}
       </ul>
     `;
