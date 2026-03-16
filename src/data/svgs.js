@@ -19,6 +19,28 @@ export const icons = {
 <path d="M4.45948 4.53932L1.27979 7.77623C0.987123 8.07459 0.512778 8.07459 0.219501 7.77623C-0.0731669 7.47892 -0.0731669 6.99559 0.219501 6.6978L2.86978 3.99986L0.219501 1.30232C-0.0731669 1.00453 -0.0731669 0.521848 0.219501 0.223405C0.512778 -0.0744686 0.987123 -0.0744686 1.27979 0.223405L4.45948 3.46032C4.60614 3.60958 4.67943 3.8048 4.67943 4.00002C4.67943 4.19524 4.60614 4.39038 4.45948 4.53932Z" fill="#303030"/>
 </svg>
 `,
+  "arrow-left": `<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_40818_14)">
+<path d="M9.50515 11.0354L10.9332 9.61685L7.83529 6.51891L16.0386 6.51891L16.0386 4.51649L7.83529 4.51649L10.9332 1.41855L9.50515 -1.52485e-06L3.99999 5.5177L9.50515 11.0354Z" fill="#005CFF"/>
+</g>
+<defs>
+<filter id="filter0_d_40818_14" x="0" y="0" width="20.0386" height="19.0354" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_40818_14"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_40818_14" result="shape"/>
+</filter>
+</defs>
+</svg>
+`,
+  "arrow-right": `<svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.53346 0L5.10538 1.41855L8.20332 4.51649H0V6.51891H8.20332L5.10538 9.61685L6.53346 11.0354L12.0386 5.5177L6.53346 0Z" fill="#005CFF"/>
+</svg>
+`,
   "all-cats-menu-icon": `<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <line x1="1" y1="6" x2="13" y2="6" stroke="black" stroke-width="2" stroke-linecap="round"/>
 <line x1="1" y1="11" x2="13" y2="11" stroke="black" stroke-width="2" stroke-linecap="round"/>

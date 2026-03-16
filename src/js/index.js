@@ -43,10 +43,13 @@ function insertSvg() {
 
 window.addEventListener("DOMContentLoaded", () => {
   carousel.insertCarouselProducts(carouselProducts);
+  carousel.initializeCarousels();
   mainProduct.insertMainProductSections(mainProductSections);
+
   mainProduct.insertMainProductSingleSection(mainProductSingleSection);
   footer.insertFooterLinkGroup(footerLinkGroups);
   footer.insertFooterSvgGroup(footerSvgs, icons);
   header.renderNav(departments);
+  header.initSearch();
   insertSvg();
 });

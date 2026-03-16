@@ -49,9 +49,9 @@
 
   .product-carousel-wrapper {
     display: flex;
+    padding-right: 16px;
     gap: clamp(10px, calc(8.215686px + 0.457516vw), 17px);
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
     scrollbar-width: none;
     position: relative;
   }
@@ -69,7 +69,7 @@
     width: 30px;
     height: 30px;
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: center;
     cursor: pointer;
     z-index: 10;
@@ -79,10 +79,20 @@
 
   .carousel-nav-btn.prev {
     left: -15px;
+    align-items: end;
   }
 
   .carousel-nav-btn.next {
-    right: -15px;
+    right: 0px;
+    align-items: center;
+    padding-left: 2px;
+    padding-top: 1px;
+  }
+
+  @media screen and (min-width: 1392px) {
+    .carousel-nav-btn.next {
+      right: -15px;
+    }
   }
 
   /* card */

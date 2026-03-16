@@ -1,3 +1,5 @@
+import { applyMouseScrollX, applyResizeCount } from "../functions/index.js";
+
 export function insertCarouselProducts(carousels) {
   carousels.forEach((carousel) => {
     const section = document.querySelector(`#${carousel.id}`);
@@ -36,7 +38,7 @@ export function insertCarouselProducts(carousels) {
               <span class="product-installments">${product.installments}</span>
             </div>
 
-            <button class="product-buy-btn button-primary">
+            <button class="product-buy-btn btn-primary">
               Comprar
             </button>
           </div>
@@ -72,4 +74,19 @@ export function insertCarouselProducts(carousels) {
       </div>
     `;
   });
+}
+
+export function initializeCarousels() {
+  const parents = document.getElementsByClassName("product-carousel-container");
+  const wrappers = document.getElementsByClassName("product-carousel-wrapper");
+
+  for (let i = 0; i < parents.length; i++) {
+    const scroll = applyMouseScrollX(parents[i], wrappers[i], {
+      scrollStart: "start",
+    });
+
+    applyResizeCount(() => {
+      scroll.update();
+    });
+  }
 }

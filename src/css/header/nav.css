@@ -75,7 +75,6 @@
     nav > div {
       width: 100%;
       padding-inline: 23px;
-      height: 335px;
       position: absolute;
       top: 36px;
       left: 0;
@@ -89,13 +88,14 @@
 
     .menu-container {
       width: 100%;
+      height: 329px;
       display: flex;
       align-items: start;
       justify-content: space-between;
       background: #fff;
       border-radius: 8px;
       overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     .menu-container > .menu-wrapper {
