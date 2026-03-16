@@ -5,10 +5,12 @@ import {
   mainProductSingleSection,
   mainProductSections,
   carouselProducts,
+  departments,
 } from "../data/index.js";
 import * as mainProduct from "./main-product.js";
 import * as carousel from "./product-carousel.js";
 import * as footer from "./footer.js";
+import * as header from "./header.js";
 
 function insertSvg() {
   const svgs = document.querySelectorAll('svg[class*="svg-"]');
@@ -45,5 +47,6 @@ window.addEventListener("DOMContentLoaded", () => {
   mainProduct.insertMainProductSingleSection(mainProductSingleSection);
   footer.insertFooterLinkGroup(footerLinkGroups);
   footer.insertFooterSvgGroup(footerSvgs, icons);
+  header.renderNav(departments);
   insertSvg();
 });

@@ -19,7 +19,7 @@ export const footerSvgs = {
   "footer-more-logos": [
     { name: "Lets Encriypt", slug: "lets-encriypt" },
     { name: "PCI certified", slug: "pci-certified" },
-    { name: "Avanti", slug: "footer-avanti-logo" },
+    { name: "Avanti", slug: "avanti-small-logo" },
     { name: "VTEX", slug: "vtex" },
   ],
 };
@@ -47,10 +47,10 @@ export const footerLinkGroups = [
   {
     title: "Atendimento",
     links: [
-      { text: "Telefone", extra: ["(00) 1234-5678"] },
-      { text: "Email", extra: ["exemplo@exemplo.com.br"] },
+      { text: "Telefone:", extra: ["(00) 1234-5678"] },
+      { text: "Email:", extra: ["exemplo@exemplo.com.br"] },
       {
-        text: "Horário de atendimento",
+        text: "Horário de atendimento:",
         extra: ["Segunda a sexta: 07:00 - 18:00", "Sábado: 09:00 - 17:00"],
       },
     ],

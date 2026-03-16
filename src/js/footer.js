@@ -21,14 +21,18 @@ export function insertFooterLinkGroup(groups) {
     groupDiv.className = "footer-link-group";
 
     const linksHTML = group.links
-      .map((link) => {
+      .map((link, index) => {
         const extraHTML = link.extra
-          ? link.extra.map((p) => `<span class="extra-text">${p}</span>`).join("")
+          ? link.extra
+              .map((p) => `<span class="extra-text">${p}</span>`)
+              .join("")
           : "";
 
         return `
         <li>
-          <h5 class="not-for-mobile li-title-desktop item-list">${link.text}${extraHTML}</h5>
+          <h5 class="not-for-mobile li-title-desktop item-list ${link.extra ? "strong" : ""} ${link.text === "Horário de atendimento:" ? "address" : ""}">
+          ${link.text}${extraHTML}
+          </h5>
           <h6 class="for-mobile li-title-mobile item-list">${link.text}${extraHTML}</h6>
         </li>
       `;
