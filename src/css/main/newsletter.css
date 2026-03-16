@@ -97,16 +97,18 @@
   @media (min-width: 768px) {
     .newsletter-form {
       grid-template-columns: 1fr 1fr;
+      max-width: 840px;
     }
     .checkbox-wrapper {
       justify-content: center;
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1084px) {
     .newsletter-form {
-      grid-template-columns: repeat(3, 280px) 121px;
+      grid-template-columns: repeat(3, 1fr) 0.43fr;
       background: #dedede;
+      max-width: none;
     }
   }
 }
