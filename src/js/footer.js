@@ -23,14 +23,13 @@ export function insertFooterLinkGroup(groups) {
     const linksHTML = group.links
       .map((link) => {
         const extraHTML = link.extra
-          ? link.extra.map((p) => `<p>${p}</p>`).join("")
+          ? link.extra.map((p) => `<span class="extra-text">${p}</span>`).join("")
           : "";
 
         return `
         <li>
-          <h5 class="not-for-mobile li-title-desktop">${link.text}</h5>
-          <h6 class="for-mobile li-title-mobile">${link.text}</h6>
-          ${extraHTML}
+          <h5 class="not-for-mobile li-title-desktop item-list">${link.text}${extraHTML}</h5>
+          <h6 class="for-mobile li-title-mobile item-list">${link.text}${extraHTML}</h6>
         </li>
       `;
       })

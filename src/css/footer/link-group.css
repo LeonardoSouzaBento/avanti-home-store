@@ -29,6 +29,8 @@
     font-family: var(--font-sans);
     font-weight: 700;
     color: var(--color-text-foreground);
+    margin-bottom: 11px;
+    font-size: 14px;
   }
 
   .li-title-mobile {
@@ -50,13 +52,6 @@
     color: var(--color-theme);
   }
 
-  .footer-li-item {
-    font-size: 12px;
-    margin-top: 4px;
-    font-family: var(--font-sans);
-    color: var(--color-text-md-foreground);
-  }
-
   .ul-footer-header button {
     display: block;
     background: none;
@@ -65,6 +60,24 @@
     position: relative;
     width: 24px;
     height: 24px;
+  }
+
+  .item-list {
+    font-size: 14px;
+    line-height: 2;
+    font-family: var(--font-sans);
+    color: var(--color-text-md-foreground);
+    max-width: 245px;
+    display: flex;
+    gap: 8px;
+  }
+
+  .extra-text {
+    display: block;
+    font-size: 12px;
+    line-height: 2;
+    font-family: var(--font-sans);
+    color: var(--color-text-md-foreground);
   }
 
   /* TABLET+ */
