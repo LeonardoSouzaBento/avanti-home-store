@@ -20,7 +20,7 @@
     margin-bottom: clamp(16px, calc(15.235294px + 0.196078vw), 19px);
     margin-right: 16px;
   }
-
+  
   @media screen and (min-width: 1392px) {
     .product-carousel-header {
       margin-right: 0;
@@ -172,6 +172,7 @@
     margin-bottom: 12px;
     color: #303030;
     overflow: hidden;
+    font-family: var(--font-sans);
   }
 
   @media screen and (min-width: 768px) {
@@ -215,6 +216,10 @@
   .product-installments {
     font-size: var(--text-xs);
     color: var(--color-text-md-foreground);
+  }
+
+  .product-installments span {
+    font-weight: 700;
   }
 
   .product-buy-btn {

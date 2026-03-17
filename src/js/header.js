@@ -40,7 +40,7 @@ function renderDepartmentsMenu(
 
     departmentsList.appendChild(btn);
 
-    btn.addEventListener("mouseenter", () => {
+    btn.addEventListener("click", () => {
       renderCategories(dept, catsMenu, menuArea);
 
       departmentsList
@@ -142,6 +142,8 @@ export function renderNav(departments) {
     catsMenu,
     menuArea
   );
+
+  scrollBar();
 }
 
 export function initSearch() {
@@ -210,4 +212,56 @@ export function initSearch() {
       searchButton.click();
     }
   });
+}
+
+function scrollBar() {
+  const list = document.querySelector(".departments-list");
+  const thumb = document.querySelector(".scrollbar-y-thumb");
+  const track = document.querySelector(".scrollbar-y");
+
+  if (!list || !thumb) return;
+
+  // Garantir que os elementos tenham o posicionamento correto para a simulação
+  if (track) track.style.position = "relative";
+  thumb.style.position = "absolute";
+  thumb.style.top = "0";
+  thumb.style.left = "0";
+
+  const update = () => {
+    const scrollHeight = list.scrollHeight;
+    const clientHeight = list.clientHeight;
+    const scrollTop = list.scrollTop;
+
+    // Se não houver scroll necessário, esconde a barra
+    if (scrollHeight <= clientHeight) {
+      if (track) track.style.opacity = "0";
+      return;
+    } else {
+      if (track) track.style.opacity = "1";
+    }
+
+    // Calcula a altura percentual do thumb baseada no conteúdo visível
+    const heightPercent = (clientHeight / scrollHeight) * 100;
+    thumb.style.height = `${heightPercent}%`;
+
+    // Calcula a posição percentual do thumb baseada no scroll atual
+    const topPercent = (scrollTop / scrollHeight) * 100;
+    thumb.style.top = `${topPercent}%`;
+  };
+
+  // Escuta o evento de scroll da lista
+  list.addEventListener("scroll", update);
+
+  // Observa mudanças de tamanho (como redimensionamento ou carregamento de fontes/imagens)
+  if (window.ResizeObserver) {
+    const resizeObserver = new ResizeObserver(update);
+    resizeObserver.observe(list);
+  }
+
+  // Observa mudanças no DOM da lista (quando novos itens são renderizados ou removidos)
+  const mutationObserver = new MutationObserver(update);
+  mutationObserver.observe(list, { childList: true, subtree: true });
+
+  // Chamada inicial para configurar o estado correto
+  update();
 }

@@ -34,6 +34,12 @@
     gap: 12px;
   }
 
+  @media screen and (min-width: 1024px) {
+    .header-wrapper {
+      padding-bottom: 13px;
+    }
+  }
+
   .menu-btn {
     /*some em 768*/
     position: relative;

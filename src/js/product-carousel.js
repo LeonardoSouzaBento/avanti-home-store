@@ -35,7 +35,10 @@ export function insertCarouselProducts(carousels) {
                 }
               </div>
 
-              <span class="product-installments">${product.installments}</span>
+              <span class="product-installments">
+                Ou em até 
+                <span>${product.installments}</span>
+              </span>
             </div>
 
             <button class="product-buy-btn btn-primary">

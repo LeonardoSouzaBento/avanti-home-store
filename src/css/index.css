@@ -89,6 +89,7 @@
 
 @layer components {
   button {
+    min-height: 32px;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -97,6 +98,12 @@
     border: none;
     background-color: transparent;
     font-weight: 700;
+  }
+
+  a{
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
   }
 
   svg {

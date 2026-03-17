@@ -11,6 +11,7 @@ import * as mainProduct from "./main-product.js";
 import * as carousel from "./product-carousel.js";
 import * as footer from "./footer.js";
 import * as header from "./header.js";
+import { scrollByButton } from "../functions/scrollByButton.js";
 
 function insertSvg() {
   const svgs = document.querySelectorAll('svg[class*="svg-"]');
@@ -42,14 +43,17 @@ function insertSvg() {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
+  header.renderNav(departments);
+  header.initSearch();
   carousel.insertCarouselProducts(carouselProducts);
   carousel.initializeCarousels();
+  const carousels = document.querySelectorAll(".product-carousel-container");
+  carousels.forEach((container) => {
+    scrollByButton(container);
+  });
   mainProduct.insertMainProductSections(mainProductSections);
-
   mainProduct.insertMainProductSingleSection(mainProductSingleSection);
   footer.insertFooterLinkGroup(footerLinkGroups);
   footer.insertFooterSvgGroup(footerSvgs, icons);
-  header.renderNav(departments);
-  header.initSearch();
   insertSvg();
 });

@@ -100,10 +100,12 @@ export function applyMouseScrollX(parent, wrapper, options = {}) {
     inertiaFrame = requestAnimationFrame(animate);
   }
 
-  function stopDragging() {
+  function stopDragging(e) {
     if (!isDragging) return;
     isDragging = false;
     applyInertia();
+    e.preventDefault();
+    e.stopPropagation();
   }
 
   wrapper.addEventListener("mousedown", onMouseDown);
