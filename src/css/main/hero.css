@@ -2,8 +2,8 @@
   .hero-section {
     width: 100%;
     position: relative;
-    background: #E8E9EB;
-    margin-bottom: clamp(56px, calc(55.979156px + 2.084419vw), 96px);
+    background: #e8e9eb;
+    margin-bottom: clamp(56px, calc(45.803922px + 2.614379vw), 96px);
   }
 
   .hero-section-container {
@@ -118,6 +118,9 @@
     .hero-image-wrapper img {
       object-position: center top;
     }
+  }
+
+  @media screen and (min-width: 840px) {
     .hero-text-content .title {
       display: flex;
       gap: -8px;

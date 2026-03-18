@@ -59,10 +59,10 @@ export function insertCarouselProducts(carousels) {
       </div>
 
       <div class="product-carousel-container">
-        <button class="carousel-nav-btn prev">
+        <button class="carousel-nav-btn prev not-for-mobile">
           <svg class="svg-arrow-left"></svg>
         </button>
-        <button class="carousel-nav-btn next">
+        <button class="carousel-nav-btn next not-for-mobile">
           <svg class="svg-arrow-right"></svg>
         </button>
         <div class="product-carousel-wrapper">

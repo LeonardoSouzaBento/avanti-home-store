@@ -7,6 +7,10 @@
     margin-inline: auto;
   }
 
+  #product-carousel-1 {
+    margin-bottom: clamp(56px, calc(45.803922px + 2.614379vw), 96px);
+  }
+
   @media screen and (min-width: 1392px) {
     .product-carousel {
       padding-right: 16px;

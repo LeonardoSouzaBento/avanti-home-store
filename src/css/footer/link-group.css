@@ -29,12 +29,11 @@
     font-family: var(--font-sans);
     font-weight: 700;
     color: var(--color-text-foreground);
-    margin-bottom: 11px;
     font-size: 14px;
   }
 
-  .li-title-mobile {
-    font-size: 12px;
+  .ul-footer-header .title:not(:has(+ button)) {
+    margin-bottom: 11px;
   }
 
   .li-title-desktop {

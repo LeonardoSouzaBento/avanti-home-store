@@ -40,7 +40,7 @@
     box-sizing: content-box;
     margin-inline: auto;
     padding-top: clamp(48px, calc(43.921569px + 1.045752vw), 64px);
-    padding-bottom: 40px;
+    padding-bottom: clamp(40px, calc(33.882353px + 1.568627vw), 64px);
     display: flex;
     flex: auto;
     justify-content: center;
@@ -70,7 +70,7 @@
 
   .footer-more-info-wrapper p {
     font-size: var(--text-xs);
-    line-height: 1.6;
+    line-height: 20px;
     max-width: 800px;
   }
 

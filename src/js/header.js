@@ -89,6 +89,58 @@ function renderCategories(dept, catsMenu, menuArea) {
   });
 }
 
+function scrollBar() {
+  const list = document.querySelector(".departments-list");
+  const thumb = document.querySelector(".scrollbar-y-thumb");
+  const track = document.querySelector(".scrollbar-y");
+  
+  if (!list || !thumb) return;
+
+  // Garantir que os elementos tenham o posicionamento correto para a simulação
+  if (track) track.style.position = "relative";
+  thumb.style.position = "absolute";
+  thumb.style.top = "0";
+  thumb.style.left = "0";
+  
+  const update = () => {
+    const scrollHeight = list.scrollHeight;
+    const clientHeight = list.clientHeight;
+    const scrollTop = list.scrollTop;
+
+    // Se não houver scroll necessário, esconde a barra
+    if (scrollHeight <= clientHeight) {
+      if (track) track.style.opacity = "0";
+      return;
+    } else {
+      if (track) track.style.opacity = "1";
+    }
+
+    // Calcula a altura percentual do thumb baseada no conteúdo visível
+    const heightPercent = (clientHeight / scrollHeight) * 100;
+    thumb.style.height = `${heightPercent}%`;
+
+    // Calcula a posição percentual do thumb baseada no scroll atual
+    const topPercent = (scrollTop / scrollHeight) * 100;
+    thumb.style.top = `${topPercent}%`;
+  };
+
+  // Escuta o evento de scroll da lista
+  list.addEventListener("scroll", update);
+  
+  // Observa mudanças de tamanho (como redimensionamento ou carregamento de fontes/imagens)
+  if (window.ResizeObserver) {
+    const resizeObserver = new ResizeObserver(update);
+    resizeObserver.observe(list);
+  }
+
+  // Observa mudanças no DOM da lista (quando novos itens são renderizados ou removidos)
+  const mutationObserver = new MutationObserver(update);
+  mutationObserver.observe(list, { childList: true, subtree: true });
+
+  // Chamada inicial para configurar o estado correto
+  update();
+}
+
 export function renderNav(departments) {
   const nav = document.querySelector("#nav");
 
@@ -144,124 +196,4 @@ export function renderNav(departments) {
   );
 
   scrollBar();
-}
-
-export function initSearch() {
-  const searchWrapper = document.querySelector(".header-search");
-  const searchInput = searchWrapper.querySelector("input");
-  const searchButton = searchWrapper.querySelector(".search-button");
-  const searchResults = document.querySelector("#search-results");
-  const searchResultsUl = searchResults.querySelector("ul");
-
-  // Limpar itens iniciais se houver
-  searchResultsUl.innerHTML = "";
-
-  const updateResultsVisibility = () => {
-    const hasItems = searchResultsUl.children.length > 0;
-    const isFocused = document.activeElement === searchInput;
-
-    if (hasItems && isFocused) {
-      searchResults.style.display = "block";
-    } else {
-      searchResults.style.display = "none";
-    }
-  };
-
-  searchButton.addEventListener("click", () => {
-    const value = searchInput.value.trim();
-    if (value === "") return;
-
-    const isDuplicate = Array.from(searchResultsUl.children).some(
-      (li) => li.textContent.toLowerCase() === value.toLowerCase()
-    );
-
-    if (isDuplicate) {
-      searchInput.value = "";
-      return;
-    }
-
-    const li = document.createElement("li");
-    li.textContent = value;
-
-    if (searchResultsUl.children.length >= 6) {
-      searchResultsUl.removeChild(searchResultsUl.lastElementChild);
-    }
-
-    searchResultsUl.insertBefore(li, searchResultsUl.firstChild);
-    searchInput.value = "";
-    updateResultsVisibility();
-  });
-
-  searchInput.addEventListener("focus", updateResultsVisibility);
-  searchInput.addEventListener("blur", () => {
-    // Pequeno delay para permitir o clique nos resultados se necessário, 
-    // mas o usuário pediu para ocultar se clicar fora de .header-search.
-    // Usaremos document click para ocultar, então aqui apenas garantimos visibilidade se focado.
-    setTimeout(updateResultsVisibility, 200);
-  });
-
-  document.addEventListener("click", (e) => {
-    if (!searchWrapper.contains(e.target)) {
-      searchResults.style.display = "none";
-    }
-  });
-
-  // Também permitir pesquisar com Enter
-  searchInput.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
-      searchButton.click();
-    }
-  });
-}
-
-function scrollBar() {
-  const list = document.querySelector(".departments-list");
-  const thumb = document.querySelector(".scrollbar-y-thumb");
-  const track = document.querySelector(".scrollbar-y");
-
-  if (!list || !thumb) return;
-
-  // Garantir que os elementos tenham o posicionamento correto para a simulação
-  if (track) track.style.position = "relative";
-  thumb.style.position = "absolute";
-  thumb.style.top = "0";
-  thumb.style.left = "0";
-
-  const update = () => {
-    const scrollHeight = list.scrollHeight;
-    const clientHeight = list.clientHeight;
-    const scrollTop = list.scrollTop;
-
-    // Se não houver scroll necessário, esconde a barra
-    if (scrollHeight <= clientHeight) {
-      if (track) track.style.opacity = "0";
-      return;
-    } else {
-      if (track) track.style.opacity = "1";
-    }
-
-    // Calcula a altura percentual do thumb baseada no conteúdo visível
-    const heightPercent = (clientHeight / scrollHeight) * 100;
-    thumb.style.height = `${heightPercent}%`;
-
-    // Calcula a posição percentual do thumb baseada no scroll atual
-    const topPercent = (scrollTop / scrollHeight) * 100;
-    thumb.style.top = `${topPercent}%`;
-  };
-
-  // Escuta o evento de scroll da lista
-  list.addEventListener("scroll", update);
-
-  // Observa mudanças de tamanho (como redimensionamento ou carregamento de fontes/imagens)
-  if (window.ResizeObserver) {
-    const resizeObserver = new ResizeObserver(update);
-    resizeObserver.observe(list);
-  }
-
-  // Observa mudanças no DOM da lista (quando novos itens são renderizados ou removidos)
-  const mutationObserver = new MutationObserver(update);
-  mutationObserver.observe(list, { childList: true, subtree: true });
-
-  // Chamada inicial para configurar o estado correto
-  update();
 }

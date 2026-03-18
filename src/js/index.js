@@ -11,6 +11,7 @@ import * as mainProduct from "./main-product.js";
 import * as carousel from "./product-carousel.js";
 import * as footer from "./footer.js";
 import * as header from "./header.js";
+import { initSearch } from "./search-bar.js";
 import { scrollByButton } from "../functions/scrollByButton.js";
 
 function insertSvg() {
@@ -44,7 +45,7 @@ function insertSvg() {
 
 window.addEventListener("DOMContentLoaded", () => {
   header.renderNav(departments);
-  header.initSearch();
+  initSearch();
   carousel.insertCarouselProducts(carouselProducts);
   carousel.initializeCarousels();
   const carousels = document.querySelectorAll(".product-carousel-container");
