@@ -1,5 +1,5 @@
 @layer components {
-  @media screen and (min-width: 768px) {
+  @media (min-width: 768px) {
     nav {
       width: 100%;
       max-width: 1260px;
@@ -21,7 +21,7 @@
       position: relative;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media (min-width: 1024px) {
       .fast-menu {
         padding: 0 32px;
       }
@@ -79,7 +79,7 @@
       left: 0;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media (min-width: 1024px) {
       nav > div {
         padding-inline: 31px;
       }
@@ -212,7 +212,7 @@
       gap: 13.18px;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media (min-width: 1024px) {
       .menu-image-wrapper {
         display: flex;
       }

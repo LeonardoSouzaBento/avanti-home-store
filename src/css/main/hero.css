@@ -120,7 +120,7 @@
     }
   }
 
-  @media screen and (min-width: 840px) {
+  @media (min-width: 840px) {
     .hero-text-content .title {
       display: flex;
       gap: -8px;

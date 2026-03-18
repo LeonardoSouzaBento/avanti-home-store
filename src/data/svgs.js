@@ -41,6 +41,9 @@ export const icons = {
 <path d="M6.53346 0L5.10538 1.41855L8.20332 4.51649H0V6.51891H8.20332L5.10538 9.61685L6.53346 11.0354L12.0386 5.5177L6.53346 0Z" fill="#005CFF"/>
 </svg>
 `,
+  line: `<svg width="1.5" height="15" viewBox="0 0 1.5 15" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1.5" height="15" fill="#f5f5f5"/>
+</svg>`,
   "all-cats-menu-icon": `<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <line x1="1" y1="6" x2="13" y2="6" stroke="black" stroke-width="2" stroke-linecap="round"/>
 <line x1="1" y1="11" x2="13" y2="11" stroke="black" stroke-width="2" stroke-linecap="round"/>

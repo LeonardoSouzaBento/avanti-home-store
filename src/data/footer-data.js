@@ -19,6 +19,7 @@ export const footerSvgs = {
   "footer-more-logos": [
     { name: "Lets Encriypt", slug: "lets-encriypt" },
     { name: "PCI certified", slug: "pci-certified" },
+    { name: "Line", slug: "line" },
     { name: "Avanti", slug: "avanti-small-logo" },
     { name: "VTEX", slug: "vtex" },
   ],
