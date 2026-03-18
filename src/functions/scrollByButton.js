@@ -21,8 +21,8 @@ export function scrollByButton(container) {
     for (let card of cards) {
       const rect = card.getBoundingClientRect();
 
-      // card parcialmente escondido à direita
-      if (rect.right > wrapperRect.right) {
+      // card parcialmente escondido à direita (com tolerância de 8px)
+      if (rect.right > wrapperRect.right + 8) {
         const offset = rect.left - wrapperRect.left;
         scrollToPosition(wrapper.scrollLeft + offset);
         return;
@@ -41,8 +41,8 @@ export function scrollByButton(container) {
     for (let i = cards.length - 1; i >= 0; i--) {
       const rect = cards[i].getBoundingClientRect();
 
-      // card parcialmente escondido à esquerda
-      if (rect.left < wrapperRect.left) {
+      // card parcialmente escondido à esquerda (com tolerância de 8px)
+      if (rect.left < wrapperRect.left - 8) {
         const offset = rect.right - wrapperRect.right;
         scrollToPosition(wrapper.scrollLeft + offset);
         return;
